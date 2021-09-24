@@ -1,9 +1,9 @@
 Library/
-Logs
-UserSettings/
-Temp
+Temp/
+Logs/
 .vs/
 obj/
-*.csproj (확장자)
+*.csproj
 *.sln
 .vsconfig
+UserSettings/
