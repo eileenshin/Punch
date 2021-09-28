@@ -57,18 +57,23 @@ public class GameManager : MonoBehaviour
             if (bgm.isPlaying == false) //bgm이 재생되는 중이 아니라면
             {
                 bgm.Play(); //bgm시작
+                currTime = 0;
             }
         }
 
         if (currTime > nextTime) // 진행시간이 다음생성시간 보다 커지면
         {
-            if (nodeCnt < listNode.Count - 1) //listNode-1 = nodeNum[0] 이 노드의 개수보다 커지면
+            if (nodeCnt < listNode.Count) //listNode-1 = nodeNum[0] 이 노드의 개수보다 커지면
             {
 
                 GameObject node = Instantiate(nodeFactory);
                 int idx = listNode[nodeCnt].nodeNum - 1;
                 node.transform.position = nodePos[idx].position;
-                nextTime += (listNode[nodeCnt + 1].time - listNode[nodeCnt].time);
+
+                if(nodeCnt < listNode.Count -1)
+                {
+                    nextTime += (listNode[nodeCnt + 1].time - listNode[nodeCnt].time);
+                }
 
                 Node n = node.GetComponent<Node>();
                 n.nodeNum = listNode[nodeCnt].nodeNum;
