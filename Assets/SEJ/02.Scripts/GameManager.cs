@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
             if (bgm.isPlaying == false) //bgm이 재생되는 중이 아니라면
             {
                 bgm.Play(); //bgm시작
-                currTime = 0;
+                currTime = 0; //현재시간 초기화!!!!!!!!!
             }
         }
 
