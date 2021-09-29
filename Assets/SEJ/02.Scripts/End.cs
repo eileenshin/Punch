@@ -44,6 +44,8 @@ public class End : MonoBehaviour
 
             print("Node1 Ãæµ¹");
             Destroy(other.gameObject);
+
+           // OVRInput.SetControllerVibration(0.01f, 0.01f, OVRInput.Controller.LTouch);
         }
 
     }

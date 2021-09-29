@@ -21,7 +21,7 @@ public class Node : MonoBehaviour
         {
             currTime += Time.fixedDeltaTime;
 
-            transform.position += Vector3.down * speed * Time.fixedDeltaTime;
+            transform.position += Vector3.back * speed * Time.fixedDeltaTime;
 
         }
     }

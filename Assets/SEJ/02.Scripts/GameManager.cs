@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
 
         LoadNode();
 
-        float dist = nodePos[0].position.y - endPos.position.y;
+        float dist = nodePos[0].position.z - endPos.position.z;
         float gapTime =(listNode[0].time - nextTime);
         print(dist + ", " +gapTime);
 

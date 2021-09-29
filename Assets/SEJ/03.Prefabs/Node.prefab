@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7238057155037709044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.54, y: -12.5, z: 20}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 6160590847209625215}
   m_Father: {fileID: 0}
@@ -123,6 +123,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Magic fire pro blue
       objectReference: {fileID: 0}
+    - target: {fileID: 4040067153382932, guid: c590b17884b119046bc6412066500b7d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294409281478964, guid: c590b17884b119046bc6412066500b7d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604663409977868, guid: c590b17884b119046bc6412066500b7d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4731861580502952, guid: c590b17884b119046bc6412066500b7d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -133,7 +145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4731861580502952, guid: c590b17884b119046bc6412066500b7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.08
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4731861580502952, guid: c590b17884b119046bc6412066500b7d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -167,33 +179,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 198696392922457284, guid: c590b17884b119046bc6412066500b7d, type: 3}
-      propertyPath: InitialModule.rotation3D
+    - target: {fileID: 4796241490362850, guid: c590b17884b119046bc6412066500b7d, type: 3}
+      propertyPath: m_LocalPosition.x
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198696392922457284, guid: c590b17884b119046bc6412066500b7d, type: 3}
-      propertyPath: ShapeModule.radius.value
-      value: 1.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 199011672764196750, guid: c590b17884b119046bc6412066500b7d, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 199205359930986294, guid: c590b17884b119046bc6412066500b7d, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 199374976460404498, guid: c590b17884b119046bc6412066500b7d, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 199556183087322092, guid: c590b17884b119046bc6412066500b7d, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 199822400336675052, guid: c590b17884b119046bc6412066500b7d, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c590b17884b119046bc6412066500b7d, type: 3}
