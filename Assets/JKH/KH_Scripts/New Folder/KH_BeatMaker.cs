@@ -103,7 +103,7 @@ public class KH_BeatMaker : MonoBehaviour
         print(str);
 
         //FileStream file = new FileStream(Application.dataPath + "/"+bgm ¿Ã∏ß+"".txt", FileMode.Create);
-        FileStream file = new FileStream(Application.dataPath + "/text.txt", FileMode.Create);
+        FileStream file = new FileStream(Application.dataPath + "/Shark.txt", FileMode.Create);
         byte[] byteData = Encoding.UTF8.GetBytes(str);
         file.Write(byteData, 0, byteData.Length);
         file.Close();

@@ -97,7 +97,7 @@ public class KH_GameManager : MonoBehaviour
     //노드 불러내는 코드
     public void LoadNode()
     {
-        FileStream file = new FileStream(Application.dataPath + "/text.txt", FileMode.Open);
+        FileStream file = new FileStream(Application.dataPath + "/Shark.txt", FileMode.Open);
         byte[] byteData = new byte[file.Length];
         file.Read(byteData, 0, byteData.Length);
         file.Close();

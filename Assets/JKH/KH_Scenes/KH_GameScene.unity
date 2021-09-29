@@ -604,8 +604,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 902359093}
-  - component: {fileID: 902359094}
   - component: {fileID: 902359092}
+  - component: {fileID: 902359094}
   m_Layer: 0
   m_Name: BeatMaker
   m_TagString: Untagged
@@ -732,7 +732,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 902359091}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5526b655e3cf25c4b9b0d9cc3f3a86f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b0f8e91902d87c40bcc165818b14f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   beatMakerMode: 0
@@ -1652,7 +1652,7 @@ MonoBehaviour:
   nodePos:
   - {fileID: 1030210966}
   - {fileID: 588914075}
-  endPos: {fileID: 1030210966}
+  endPos: {fileID: 1664624024}
 --- !u!4 &1715425321
 Transform:
   m_ObjectHideFlags: 0
