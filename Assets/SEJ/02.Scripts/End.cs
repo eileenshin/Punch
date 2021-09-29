@@ -12,7 +12,6 @@ public class End : MonoBehaviour
 
     }
 
-
     // Update is called once per frame
     void Update()
     {
@@ -29,15 +28,10 @@ public class End : MonoBehaviour
             {
                 print("Perfect");
                 ScoreManager.instance.score += 100;
-                //perfect
                 ScoreManager.instance.combo += 1;
                 ScoreManager.instance.Hp += 1;
-
+   
             }
-
-            //good
-
-            //bad
 
             else
             {
@@ -47,7 +41,6 @@ public class End : MonoBehaviour
                 ScoreManager.instance.Hp -= 10;
 
             }
-
 
             print("Node1 Ãæµ¹");
             Destroy(other.gameObject);
