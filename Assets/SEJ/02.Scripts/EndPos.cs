@@ -23,10 +23,10 @@ public class EndPos : MonoBehaviour
         }
         else
         {
-
             end1.gameObject.SetActive(false);
-
         }
+
+
         //2번버튼 눌렀을 때
         //end2 자리에 닿은
         //노드가 파괴된다
