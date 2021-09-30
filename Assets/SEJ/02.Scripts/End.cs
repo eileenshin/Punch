@@ -6,6 +6,8 @@ public class End : MonoBehaviour
 {
     public GameObject standard;
 
+    public OVRInput.Controller hand;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +19,15 @@ public class End : MonoBehaviour
     {
 
     }
+
+    IEnumerator Vibration()
+    {
+        OVRInput.SetControllerVibration(1f, 1f, hand);
+       
+        yield return null;
+        OVRInput.SetControllerVibration( 0, 0 , hand);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Node")
@@ -45,6 +56,7 @@ public class End : MonoBehaviour
             print("Node1 Ãæµ¹");
             Destroy(other.gameObject);
 
+            StartCoroutine(Vibration());
            // OVRInput.SetControllerVibration(0.01f, 0.01f, OVRInput.Controller.LTouch);
         }
 

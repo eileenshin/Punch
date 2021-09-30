@@ -22,6 +22,11 @@ public class GameManager : MonoBehaviour
 
     public float nodeSpeed; //노드가 떨어지는 속도
 
+    //노드이펙트 위치
+    public Transform eftPos;
+    public GameObject moveEft;
+
+
     public Transform[] nodePos; //노드가 생성될 위치
     public Transform endPos; //노드가 끝날 위치
 
