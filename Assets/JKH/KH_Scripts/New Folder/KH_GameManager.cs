@@ -44,7 +44,7 @@ public class KH_GameManager : MonoBehaviour
         LoadNode();
 
         //pos와 endpos간의 거리 (절댓값)
-        float dist = Mathf.Abs(nodePos[0].position.y - endPos.position.y);
+        float dist = Mathf.Abs(nodePos[0].position.x - endPos.position.x);
         //첫번쨰 리스트노드의 시간과 그다음시간 차이?? @@이거 잘 모르겠음
         float gapTime = Mathf.Abs(listNode[0].time - nextTime);
 

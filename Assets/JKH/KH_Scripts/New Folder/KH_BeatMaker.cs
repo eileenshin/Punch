@@ -80,6 +80,14 @@ public class KH_BeatMaker : MonoBehaviour
                 {
                     AddNode(2, currTime);
                 }
+                if (Input.GetKeyDown(KeyCode.Alpha3))
+                {
+                    AddNode(3, currTime);
+                }
+                if (Input.GetKeyDown(KeyCode.Alpha4))
+                {
+                    AddNode(4, currTime);
+                }
             }
         }
     }
