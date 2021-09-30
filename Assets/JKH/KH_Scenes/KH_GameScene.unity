@@ -2812,7 +2812,7 @@ MonoBehaviour:
   listNode: []
   nodeFactory: {fileID: 7124176588869307412, guid: e2ff9d3aeb999814abc771cc8f556cd8, type: 3}
   bgm: {fileID: 902359092}
-  nextTime: 2.5
+  nextTime: 1
   nodeSpeed: 0
   nodePos:
   - {fileID: 592163889}

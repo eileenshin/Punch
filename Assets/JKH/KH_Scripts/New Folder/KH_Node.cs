@@ -14,7 +14,7 @@ public class KH_Node : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.position += Vector3.back * speed;
+        transform.position += Vector3.back * speed * Time.fixedDeltaTime;
 
     }
 }
