@@ -87,6 +87,10 @@ public class BeatMaker : MonoBehaviour
                 {
                     AddNode(3, currTime);
                 }
+                if (Input.GetKeyDown(KeyCode.Alpha4))
+                {
+                    AddNode(4, currTime);
+                }
             } 
         }
     
