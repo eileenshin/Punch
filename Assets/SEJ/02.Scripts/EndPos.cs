@@ -5,7 +5,7 @@ using UnityEngine;
 public class EndPos : MonoBehaviour
 {
     public Transform end1;
-    public Transform end2;
+    
     public Transform end3;
 
     void Update()
@@ -31,16 +31,17 @@ public class EndPos : MonoBehaviour
         //end2 자리에 닿은
         //노드가 파괴된다
 
-        if (Input.GetKey(KeyCode.Alpha2))
-        {
+        //if (Input.GetKey(KeyCode.Alpha2))
+        //{
 
-            end2.gameObject.SetActive(true);
+        //    end2.gameObject.SetActive(true);
 
-        }
-        else
-        {
-            end2.gameObject.SetActive(false);
-        }
+        //}
+        //else
+        //{
+        //    end2.gameObject.SetActive(false);
+        //}
+
         if (Input.GetKey(KeyCode.Alpha3))
         {
 
