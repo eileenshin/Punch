@@ -21,4 +21,9 @@ public class KH_SceneManager : MonoBehaviour
     {
         SceneManager.LoadScene("KH_GameScene");
     }
+
+    public void onClickNextLevel()
+    {
+        SceneManager.LoadScene("SEJ_Scene");
+    }
 }

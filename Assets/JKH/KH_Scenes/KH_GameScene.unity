@@ -1376,7 +1376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b0f8e91902d87c40bcc165818b14f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beatMakerMode: 1
+  beatMakerMode: 0
   bgm: {fileID: 902359092}
   listNode: []
 --- !u!1 &917224228
