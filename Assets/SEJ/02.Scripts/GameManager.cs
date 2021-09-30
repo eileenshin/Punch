@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
 
     public AudioSource bgm; //BGM
 
-    float currTime; // 현재시간 
+    public float currTime; // 현재시간 
 
     public float nextTime = 5; //다음생성될 시간
 
