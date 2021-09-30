@@ -613,6 +613,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   standard: {fileID: 0}
+  hand: 2
+  eftFactory: {fileID: 0}
+  eftRange: 2
+  eftPos: {fileID: 0}
 --- !u!1 &1167503540
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,6 +743,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   standard: {fileID: 0}
+  hand: 1
+  eftFactory: {fileID: 0}
+  eftRange: 2
+  eftPos: {fileID: 0}
 --- !u!1 &1054112583220142
 GameObject:
   m_ObjectHideFlags: 0

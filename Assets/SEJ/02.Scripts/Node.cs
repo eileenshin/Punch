@@ -7,13 +7,15 @@ public class Node : MonoBehaviour
     public float speed = 1;
     public int nodeNum;
     public float currTime;
-    //Rigidbody rb;
-    // Start is called before the first frame update
+
+
+
     void Start()
     {
-        //rb = GetComponent<Rigidbody>();
         speed = GameManager.instance.nodeSpeed;
     }
+   
+
 
     private void FixedUpdate()
     {
@@ -24,5 +26,8 @@ public class Node : MonoBehaviour
             transform.position += Vector3.back * speed * Time.fixedDeltaTime;
 
         }
+      
     }
+
+
 }

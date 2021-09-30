@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 129222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.18970801, y: 0.18970801, z: 0.18970801}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -4814,7 +4814,7 @@ MonoBehaviour:
   haveToAssignTemporaryMaterialToHittedObject: 1
   toAssignToHittedObject: {fileID: 2100000, guid: 7683bac8b51efd84dbf6ec29c04b4627, type: 2}
   toAssignToHittedObjectDuration: 2
-  haveSpawnSound: 1
+  haveSpawnSound: 0
   spawnSound: {fileID: 8300000, guid: 48c10ad689c30034f85c2165670c0a29, type: 3}
-  haveHitSound: 1
+  haveHitSound: 0
   hitSound: {fileID: 8300000, guid: 1d7cbd978907e8f44ba06a8810214486, type: 3}
