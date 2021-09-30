@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6466896786988711132}
   - component: {fileID: 6555020111764417163}
   m_Layer: 0
-  m_Name: Node
+  m_Name: Node 1
   m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -166,6 +166,30 @@ PrefabInstance:
     - target: {fileID: 4731861580502952, guid: c590b17884b119046bc6412066500b7d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198401977771408020, guid: c590b17884b119046bc6412066500b7d, type: 3}
+      propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198401977771408020, guid: c590b17884b119046bc6412066500b7d, type: 3}
+      propertyPath: VelocityModule.z.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198503361657273424, guid: c590b17884b119046bc6412066500b7d, type: 3}
+      propertyPath: VelocityModule.y.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198503361657273424, guid: c590b17884b119046bc6412066500b7d, type: 3}
+      propertyPath: VelocityModule.z.scalar
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 198696392922457284, guid: c590b17884b119046bc6412066500b7d, type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198696392922457284, guid: c590b17884b119046bc6412066500b7d, type: 3}
+      propertyPath: VelocityModule.z.scalar
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 198696392922457284, guid: c590b17884b119046bc6412066500b7d, type: 3}
       propertyPath: InitialModule.rotation3D
