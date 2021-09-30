@@ -94,12 +94,7 @@ public class BeatMaker : MonoBehaviour
             } 
         }
     
-                
-                
-                
-                
     }
-
     private void AddNode(int nodeNum, float time)
     {
         NodeInfo info = new NodeInfo();
@@ -121,3 +116,8 @@ public class BeatMaker : MonoBehaviour
         file.Close();
     }
 }
+                
+                
+                
+                
+

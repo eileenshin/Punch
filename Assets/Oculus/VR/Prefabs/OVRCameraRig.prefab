@@ -614,9 +614,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standard: {fileID: 0}
   hand: 2
-  eftFactory: {fileID: 0}
+  eftFactory: {fileID: 163064, guid: 2bdc186a2c521f1488fe14cb4a745323, type: 3}
   eftRange: 2
-  eftPos: {fileID: 0}
+  eftPos: {fileID: 1084253521}
 --- !u!1 &1167503540
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,9 +744,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standard: {fileID: 0}
   hand: 1
-  eftFactory: {fileID: 0}
+  eftFactory: {fileID: 163064, guid: 2bdc186a2c521f1488fe14cb4a745323, type: 3}
   eftRange: 2
-  eftPos: {fileID: 0}
+  eftPos: {fileID: 1167503541}
 --- !u!1 &1054112583220142
 GameObject:
   m_ObjectHideFlags: 0
