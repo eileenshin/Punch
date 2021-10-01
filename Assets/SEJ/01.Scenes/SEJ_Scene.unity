@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SubtractiveShadowColor: {r: 0.7977483, g: 0.8149395, b: 0.8584906, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: b6a3f8bca2c865243929bac258c89b96, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -416,6 +416,11 @@ MonoBehaviour:
   beatMakerMode: 0
   bgm: {fileID: 761752013}
   listNode: []
+--- !u!4 &837739897 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 837739897, guid: f69ddbaed177b2f4a9ae8b89ec53963f, type: 3}
+  m_PrefabInstance: {fileID: 8720166917042491353}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &917080899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -471,14 +476,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1084253521, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084253521, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084253521, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 1084253522, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: standard
       value: 
       objectReference: {fileID: 1023803309}
+    - target: {fileID: 1084253522, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: eftFactory
+      value: 
+      objectReference: {fileID: 165734, guid: 6c1e328deef14cf41982d5f9232e04ff, type: 3}
+    - target: {fileID: 1084253526, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 1167503541, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167503541, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167503541, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 1167503542, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: standard
       value: 
       objectReference: {fileID: 1023803309}
+    - target: {fileID: 1167503542, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: eftFactory
+      value: 
+      objectReference: {fileID: 165734, guid: 6c1e328deef14cf41982d5f9232e04ff, type: 3}
+    - target: {fileID: 1167503546, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
 --- !u!1 &963194225
@@ -759,6 +804,7 @@ MonoBehaviour:
   - {fileID: 415607541}
   - {fileID: 1833401185}
   - {fileID: 548231653}
+  - {fileID: 837739897}
   endPos: {fileID: 1107374402}
 --- !u!4 &1833401185 stripped
 Transform:
@@ -777,6 +823,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5208052338964231724, guid: f69ddbaed177b2f4a9ae8b89ec53963f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5208052339920359810, guid: f69ddbaed177b2f4a9ae8b89ec53963f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8720166918082337950, guid: f69ddbaed177b2f4a9ae8b89ec53963f, type: 3}
       propertyPath: m_RootOrder
       value: 7

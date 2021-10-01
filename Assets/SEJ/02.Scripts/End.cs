@@ -71,7 +71,7 @@ public class End : MonoBehaviour
             Destroy(other.gameObject);
 
             StartCoroutine(Vibration());
-           // OVRInput.SetControllerVibration(0.01f, 0.01f, OVRInput.Controller.LTouch);
+           
         }
 
     }
