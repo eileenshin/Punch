@@ -44,12 +44,12 @@ public class KH_GameManager : MonoBehaviour
         LoadNode();
 
         //pos와 endpos간의 거리 (절댓값)
-        float dist = Mathf.Abs(nodePos[0].position.y - endPos.position.y);
+        float dist = Mathf.Abs(nodePos[0].position.z - endPos.position.z);
         //첫번쨰 리스트노드의 시간과 그다음시간 차이?? @@이거 잘 모르겠음
         float gapTime = Mathf.Abs(listNode[0].time - nextTime);
 
         //속도= 거리/시간
-        nodeSpeed = (dist / 1) * Time.fixedDeltaTime; //gaptime
+        nodeSpeed = (dist / gapTime) ; //gaptime
                                                       //약간 노가다 
 
     }
@@ -66,28 +66,49 @@ public class KH_GameManager : MonoBehaviour
             if (bgm.isPlaying == false)
             {
                 bgm.Play();
+                currTime = 0; //현재시간 초기화!!!!!!!!!
             }
         }
 
         if (currTime > nextTime) //5초
         {
-            //5초가 지나면 노드가 생성된다.
-            if (nodeCnt < listNode.Count - 1)
+            ////5초가 지나면 노드가 생성된다.
+            //if (nodeCnt < listNode.Count - 1)
+            //{
+
+            //    //노드공장에서 노드를 생성
+            //    GameObject node = Instantiate(nodeFactory);
+            //    //listNode의 n번째에서 nodeNum 정보를 가져온다
+            //    int idx = listNode[nodeCnt].nodeNum - 1;
+            //    //nodePos(0과 1중)을 위치시킨다 
+            //    node.transform.position = nodePos[idx].position;
+            //    //nextTime= 다음 노드시간- 현재노드 시간
+            //    nextTime += (listNode[nodeCnt + 1].time - listNode[nodeCnt].time);
+            //    //Node 스크립트를 가져온다.
+            //    KH_Node n = node.GetComponent<KH_Node>();
+            //    //그 다음 nodeNum을 저장한다. ??????????
+            //    n.nodeNum = listNode[nodeCnt].nodeNum;
+            //    //다음노드를 생성하기 위핸 nodeCnt증가시킨다
+            //    nodeCnt++;
+            //}
+
+
+            //copied
+            if (nodeCnt < listNode.Count) //listNode-1 = nodeNum[0] 이 노드의 개수보다 커지면
             {
 
-                //노드공장에서 노드를 생성
                 GameObject node = Instantiate(nodeFactory);
-                //listNode의 n번째에서 nodeNum 정보를 가져온다
                 int idx = listNode[nodeCnt].nodeNum - 1;
-                //nodePos(0과 1중)을 위치시킨다 
                 node.transform.position = nodePos[idx].position;
-                //nextTime= 다음 노드시간- 현재노드 시간
-                nextTime += (listNode[nodeCnt + 1].time - listNode[nodeCnt].time);
-                //Node 스크립트를 가져온다.
+
+                if (nodeCnt < listNode.Count - 1)
+                {
+                    nextTime += (listNode[nodeCnt + 1].time - listNode[nodeCnt].time);
+                }
+
                 KH_Node n = node.GetComponent<KH_Node>();
-                //그 다음 nodeNum을 저장한다. ??????????
                 n.nodeNum = listNode[nodeCnt].nodeNum;
-                //다음노드를 생성하기 위핸 nodeCnt증가시킨다
+
                 nodeCnt++;
             }
         }

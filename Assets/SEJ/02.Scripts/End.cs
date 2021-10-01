@@ -52,10 +52,12 @@ public class End : MonoBehaviour
             if (dist > -0.5f && dist < 1f)
             {
                 print("Perfect");
+
                 ScoreManager.instance.score += 100;
                 ScoreManager.instance.combo += 1;
                 ScoreManager.instance.Hp += 1;
-   
+
+            
             }
 
             else
