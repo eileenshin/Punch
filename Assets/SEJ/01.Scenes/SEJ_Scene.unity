@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.14951244, g: 0.13356248, b: 0.2528142, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0.99999946, b: 0.99999946, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -476,6 +476,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1084253521, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084253521, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084253521, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 1084253522, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: standard
       value: 
@@ -484,6 +496,22 @@ PrefabInstance:
       propertyPath: eftFactory
       value: 
       objectReference: {fileID: 165734, guid: 6c1e328deef14cf41982d5f9232e04ff, type: 3}
+    - target: {fileID: 1084253526, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 1167503541, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167503541, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167503541, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 1167503542, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: standard
       value: 
@@ -492,6 +520,10 @@ PrefabInstance:
       propertyPath: eftFactory
       value: 
       objectReference: {fileID: 165734, guid: 6c1e328deef14cf41982d5f9232e04ff, type: 3}
+    - target: {fileID: 1167503546, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
 --- !u!1 &963194225
@@ -791,6 +823,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5208052338964231724, guid: f69ddbaed177b2f4a9ae8b89ec53963f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5208052339920359810, guid: f69ddbaed177b2f4a9ae8b89ec53963f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8720166918082337950, guid: f69ddbaed177b2f4a9ae8b89ec53963f, type: 3}
       propertyPath: m_RootOrder
       value: 7
