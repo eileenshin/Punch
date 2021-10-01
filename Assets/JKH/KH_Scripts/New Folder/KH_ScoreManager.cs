@@ -64,11 +64,11 @@ public class KH_ScoreManager : MonoBehaviour
     }
     public void UpdateCurrScore()
     {
-        CurrScoreUI.text = "CurrScore: " + CurrScore;
+        CurrScoreUI.text = "" + CurrScore;
     }
     public void UpdateCombo()
     {
-        ComboUI.text = "Combo: " + Combo;
+        ComboUI.text = ""+Combo;
     }
     public void UpdateHp()
     {
