@@ -56,8 +56,6 @@ public class End : MonoBehaviour
                 ScoreManager.instance.score += 100;
                 ScoreManager.instance.combo += 1;
                 ScoreManager.instance.Hp += 1;
-
-            
             }
 
             else
@@ -71,11 +69,14 @@ public class End : MonoBehaviour
 
             print("Node1 Ãæµ¹");
             //Destroy(other.gameObject);
-            Dissolve dissolve = other.gameObject.GetComponent<Dissolve>();
-            dissolve.Show();
+            //Dissolve dissolve = other.gameObject.GetComponent<Dissolve>();
+            //dissolve.Show();
+
+            EnmeyFracture fracture = other.gameObject.GetComponent<EnmeyFracture>();
+            fracture.OnHit();
 
             StartCoroutine(Vibration());
-           
+          
         }
 
     }
