@@ -68,7 +68,9 @@ public class End : MonoBehaviour
             }
 
             print("Node1 Ãæµ¹");
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
+            Dissolve dissolve = other.gameObject.GetComponent<Dissolve>();
+            dissolve.Show();
 
             StartCoroutine(Vibration());
            
