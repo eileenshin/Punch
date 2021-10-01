@@ -37,7 +37,8 @@ public class ScoreManager : MonoBehaviour
     }
     void Start()
     {
-
+        //Ω√¿€HP
+        Hp = 100;
     }
 
     // Update is called once per frame
