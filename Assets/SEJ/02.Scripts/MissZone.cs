@@ -10,14 +10,10 @@ public class MissZone : MonoBehaviour
         {
             
             ScoreManager.instance.combo = 0;
-            ScoreManager.instance.Hp -= 10;
+            ScoreManager.instance.currHP -= 10;
             print("Miss" + ScoreManager.instance.Hp);
             Destroy(other.gameObject);
         }    
-
-
-
-
 
     }
 
