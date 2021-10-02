@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class End : MonoBehaviour
 {
-    public GameObject standard;
+    public GameObject standard; //endPos
 
-    public OVRInput.Controller hand;
+    public OVRInput.Controller hand; 
 
     //ÀÌÆåÆ®°øÀå
     public GameObject eftFactory;
@@ -16,19 +16,6 @@ public class End : MonoBehaviour
     //³ëµåÀÌÆåÆ® À§Ä¡
     public Transform eftPos;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     IEnumerator Vibration()
     {
         OVRInput.SetControllerVibration(1f, 1f, hand);
@@ -37,7 +24,7 @@ public class End : MonoBehaviour
         OVRInput.SetControllerVibration( 0, 0 , hand);
     }
 
-    private void OnTriggerEnter(Collider other)
+   public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Node")
         {
@@ -51,11 +38,11 @@ public class End : MonoBehaviour
 
             if (dist > -0.5f && dist < 1f)
             {
-                print("Perfect");
+                print("µæÁ¡,");
 
                 ScoreManager.instance.score += 100;
                 ScoreManager.instance.combo += 1;
-                ScoreManager.instance.Hp += 1;
+                ScoreManager.instance.currHP += 1;
             }
 
             else
@@ -63,17 +50,17 @@ public class End : MonoBehaviour
                 print("Miss");
 
                 ScoreManager.instance.combo = 0;
-                ScoreManager.instance.Hp -= 10;
+                ScoreManager.instance.currHP -= 10;
 
             }
 
             print("Node1 Ãæµ¹");
-            //Destroy(other.gameObject);
-            //Dissolve dissolve = other.gameObject.GetComponent<Dissolve>();
-            //dissolve.Show();
+            Destroy(other.gameObject);
+            Dissolve dissolve = other.gameObject.GetComponent<Dissolve>();
+            dissolve.Show();
 
-            EnmeyFracture fracture = other.gameObject.GetComponent<EnmeyFracture>();
-            fracture.OnHit();
+            //EnmeyFracture fracture = other.gameObject.GetComponent<EnmeyFracture>();
+            //fracture.OnHit();
 
             StartCoroutine(Vibration());
           
