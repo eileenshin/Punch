@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class KH_ScoreManager : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class KH_ScoreManager : MonoBehaviour
     public Text ComboUI;
     //public int currScore;
     public int bestScore;
+    
+    
 
 
     public static KH_ScoreManager instance;
@@ -54,6 +57,7 @@ public class KH_ScoreManager : MonoBehaviour
         UpdateCurrScore();
         UpdateCombo();
         UpdateHp();
+        LoseScene();
     }
 
     public void AddScore(int Score)
@@ -73,5 +77,26 @@ public class KH_ScoreManager : MonoBehaviour
     public void UpdateHp()
     {
         HpUI.text = "Hp: " + HP;
+    }
+
+    public void LoseScene()
+    {
+        int count = KH_GameManager.instance.listNode.Count;
+        int nodeCnt = KH_GameManager.instance.nodeCnt;
+        if (HP <= 0)
+        {
+            //SceneManager.LoadScene(""); //loseScene 가져온다.
+            print("로즈씬ㅁ");
+        }
+        float currTime = 0;
+        currTime += Time.deltaTime;
+        if (count-1 == nodeCnt) //?
+        {
+            if (currTime > 2)
+            {
+                //SceneManager.LoadScene(""); //loseScene 가져온다.
+                print("End");
+            }
+        }
     }
 }
