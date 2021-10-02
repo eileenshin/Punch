@@ -16,8 +16,8 @@ public class KH_ScoreManager : MonoBehaviour
     public Text ComboUI;
     //public int currScore;
     public int bestScore;
-    
-    
+    float EndTime = 0;
+
 
 
     public static KH_ScoreManager instance;
@@ -58,6 +58,7 @@ public class KH_ScoreManager : MonoBehaviour
         UpdateCombo();
         UpdateHp();
         LoseScene();
+        VictoryScene();
     }
 
     public void AddScore(int Score)
@@ -81,21 +82,30 @@ public class KH_ScoreManager : MonoBehaviour
 
     public void LoseScene()
     {
-        int count = KH_GameManager.instance.listNode.Count;
-        int nodeCnt = KH_GameManager.instance.nodeCnt;
+        
         if (HP <= 0)
         {
             //SceneManager.LoadScene(""); //loseScene 가져온다.
-            print("로즈씬ㅁ");
+            print("Lose");
         }
-        float currTime = 0;
-        currTime += Time.deltaTime;
-        if (count-1 == nodeCnt) //?
+        
+        
+    }
+
+    public void VictoryScene()
+    {
+        int count = KH_GameManager.instance.listNode.Count;
+        int nodeCnt = KH_GameManager.instance.nodeCnt;
+        //print("Count갯수" + count);
+        //print("NodeCnt갯수" + nodeCnt);
+        if (count == nodeCnt) //?
         {
-            if (currTime > 2)
+
+            EndTime += Time.deltaTime;
+            if (EndTime > 2)
             {
-                //SceneManager.LoadScene(""); //loseScene 가져온다.
-                print("End");
+                //SceneManager.LoadScene(""); //Victory 가져온다.
+                print("Victory");
             }
         }
     }
