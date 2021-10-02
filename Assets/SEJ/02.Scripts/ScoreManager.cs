@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -17,15 +18,7 @@ public class ScoreManager : MonoBehaviour
     public int Hp;
 
 
-    //점수 열거형
-    enum ScoreM
-    {
-        perfect, //0
-        good,     //1
-        bad,      //2
-        miss      //3
-    }
-
+ 
 
     private void Awake()
     {

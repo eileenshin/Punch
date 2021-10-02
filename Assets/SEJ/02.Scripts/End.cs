@@ -37,7 +37,7 @@ public class End : MonoBehaviour
         OVRInput.SetControllerVibration( 0, 0 , hand);
     }
 
-    private void OnTriggerEnter(Collider other)
+   public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Node")
         {
@@ -68,12 +68,12 @@ public class End : MonoBehaviour
             }
 
             print("Node1 Ãæµ¹");
-            //Destroy(other.gameObject);
-            //Dissolve dissolve = other.gameObject.GetComponent<Dissolve>();
-            //dissolve.Show();
+            Destroy(other.gameObject);
+            Dissolve dissolve = other.gameObject.GetComponent<Dissolve>();
+            dissolve.Show();
 
-            EnmeyFracture fracture = other.gameObject.GetComponent<EnmeyFracture>();
-            fracture.OnHit();
+            //EnmeyFracture fracture = other.gameObject.GetComponent<EnmeyFracture>();
+            //fracture.OnHit();
 
             StartCoroutine(Vibration());
           
