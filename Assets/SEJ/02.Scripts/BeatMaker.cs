@@ -75,21 +75,37 @@ public class BeatMaker : MonoBehaviour
                 currTime += Time.deltaTime;
 
                 //≥Ï¿Ω ¥‹√‡≈∞
-                if(Input.GetKeyDown(KeyCode.Alpha1))
+                if(Input.GetKeyDown(KeyCode.A))
                 {
                     AddNode(1, currTime);
                 }
-                if (Input.GetKeyDown(KeyCode.Alpha2)) 
+                if (Input.GetKeyDown(KeyCode.S)) 
                 {
                     AddNode(2, currTime);
                 }
-                if (Input.GetKeyDown(KeyCode.Alpha3))
+                if (Input.GetKeyDown(KeyCode.D))
                 {
                     AddNode(3, currTime);
                 }
-                if (Input.GetKeyDown(KeyCode.Alpha4))
+                if (Input.GetKeyDown(KeyCode.F))
                 {
                     AddNode(4, currTime);
+                }
+                if (Input.GetKeyDown(KeyCode.Q))
+                {
+                    AddNode(5, currTime);
+                }
+                if (Input.GetKeyDown(KeyCode.W))
+                {
+                    AddNode(6, currTime);
+                }
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    AddNode(7, currTime);
+                }
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    AddNode(8, currTime);
                 }
             } 
         }
