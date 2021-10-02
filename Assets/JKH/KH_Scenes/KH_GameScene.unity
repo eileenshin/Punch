@@ -2333,7 +2333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1473455913
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3091,6 +3091,7 @@ MonoBehaviour:
   nodeFactory: {fileID: 7124176588869307412, guid: e2ff9d3aeb999814abc771cc8f556cd8, type: 3}
   bgm: {fileID: 902359092}
   nextTime: 1
+  nodeCnt: 0
   nodeSpeed: 0
   nodePos:
   - {fileID: 592163889}
@@ -3980,7 +3981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4345227438951440152, guid: f69ddbaed177b2f4a9ae8b89ec53963f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 52.8
+      value: 151.7
       objectReference: {fileID: 0}
     - target: {fileID: 5208052338964231698, guid: f69ddbaed177b2f4a9ae8b89ec53963f, type: 3}
       propertyPath: m_Enabled

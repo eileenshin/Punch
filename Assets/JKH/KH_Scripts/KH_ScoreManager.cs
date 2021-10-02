@@ -57,6 +57,7 @@ public class KH_ScoreManager : MonoBehaviour
         UpdateCurrScore();
         UpdateCombo();
         UpdateHp();
+        LoseScene();
     }
 
     public void AddScore(int Score)
@@ -81,15 +82,15 @@ public class KH_ScoreManager : MonoBehaviour
     public void LoseScene()
     {
         int count = KH_GameManager.instance.listNode.Count;
-        int NodeCount = KH_GameManager.instance.nodeCnt;
+        int nodeCnt = KH_GameManager.instance.nodeCnt;
         if (HP <= 0)
         {
             //SceneManager.LoadScene(""); //loseScene 가져온다.
-            print("HP=0");
+            print("로즈씬ㅁ");
         }
         float currTime = 0;
         currTime += Time.deltaTime;
-        if (count == NodeCount)
+        if (count-1 == nodeCnt) //?
         {
             if (currTime > 2)
             {
