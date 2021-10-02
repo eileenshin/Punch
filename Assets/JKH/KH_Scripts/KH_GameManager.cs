@@ -23,7 +23,7 @@ public class KH_GameManager : MonoBehaviour
     public float nextTime = 3f; //5
 
     //노드 카운트
-    int nodeCnt = 0;
+    public int nodeCnt = 0;
 
     public float nodeSpeed;
 
