@@ -3978,6 +3978,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4345227438951440152, guid: f69ddbaed177b2f4a9ae8b89ec53963f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 52.8
+      objectReference: {fileID: 0}
     - target: {fileID: 5208052338964231698, guid: f69ddbaed177b2f4a9ae8b89ec53963f, type: 3}
       propertyPath: m_Enabled
       value: 1
