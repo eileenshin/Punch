@@ -14,9 +14,12 @@ public class Instantiate512 : MonoBehaviour
             GameObject instanceSampleCube = Instantiate(smapleCubePrefab);
             instanceSampleCube.transform.parent = transform;
             instanceSampleCube.name = "SampleCube" + i;
-            instanceSampleCube.transform.localPosition = new Vector3(0, 0, 0.05f * i);
             // 전체 이퀄라이즈의 방향 (x축,y축,z축) z축 방향으로 간격와 나열하는 개수 
+            instanceSampleCube.transform.localPosition = new Vector3(0, 0, 0.05f * i);
+            instanceSampleCube.transform.rotation = Quaternion.Euler(90, 90, 90); //바닥에 눕도록
            
+
+
             sampleCube[i] = instanceSampleCube;
         }
     }
