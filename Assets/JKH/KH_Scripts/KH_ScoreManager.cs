@@ -17,6 +17,7 @@ public class KH_ScoreManager : MonoBehaviour
     //public int currScore;
     public int bestScore;
     float EndTime = 0;
+    public int MissCnt;
 
 
 
@@ -35,6 +36,10 @@ public class KH_ScoreManager : MonoBehaviour
     }
     void Start()
     {
+        HP = 100;
+        Combo = 0;
+        CurrScore = 0;
+        MissCnt = 0;
 
     }
 
@@ -98,7 +103,7 @@ public class KH_ScoreManager : MonoBehaviour
         int nodeCnt = KH_GameManager.instance.nodeCnt;
         //print("Count°¹¼ö" + count);
         //print("NodeCnt°¹¼ö" + nodeCnt);
-        if (count == nodeCnt) //?
+        if (count == nodeCnt) 
         {
 
             EndTime += Time.deltaTime;
@@ -108,5 +113,9 @@ public class KH_ScoreManager : MonoBehaviour
                 print("Victory");
             }
         }
+    }
+    public void Miss()
+    {
+        
     }
 }

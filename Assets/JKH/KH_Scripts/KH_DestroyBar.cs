@@ -43,6 +43,7 @@ public class KH_DestroyBar : MonoBehaviour
                 print("Miss");
                 KH_ScoreManager.instance.HP -= 10;
                 KH_ScoreManager.instance.Combo = 0;
+                KH_ScoreManager.instance.MissCnt += 1;
             }
             Destroy(other.gameObject);
         }
