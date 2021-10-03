@@ -73,9 +73,9 @@ public class ScoreManager : MonoBehaviour
         combo += 1;
         currHP += 1;
 
-        currScore.text = "" + score ;
-        comboScore.text = "" + combo;
-        txtBestScore.text = "" + bestScore;
+        currScore.text = ""+ score ;
+        comboScore.text = "Combo:" + combo;
+        txtBestScore.text = "Best:" + bestScore;
         
 
 
