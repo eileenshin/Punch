@@ -11,9 +11,6 @@ public class SceneLose : MonoBehaviour
     public Button btReplay;
     public Button btQuit;
 
-
-
-
     // Start is called before the first frame update
     void Start()
     {
