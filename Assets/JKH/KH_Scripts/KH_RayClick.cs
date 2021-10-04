@@ -33,8 +33,8 @@ public class KH_RayClick : MonoBehaviour
             lr.SetPosition(1, Vector3.zero);
         }
 
-        //만약 오른쪽 A버튼을 누른다면
-        if (OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.RTouch))
+        //만약 오른쪽  트리거버튼을 누른다면
+        if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch))
         {
             //만약에 부딪힌 놈이 Button이라면 
             Button btn = hit.transform.GetComponent<Button>();

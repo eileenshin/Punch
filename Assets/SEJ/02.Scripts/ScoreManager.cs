@@ -94,7 +94,7 @@ public class ScoreManager : MonoBehaviour
     {
         if(currHP <=0)
         {
-          //  SceneManager.LoadScene("GameOver_Lose");
+          SceneManager.LoadScene("GameOver_Lose");
         }
     }
 
