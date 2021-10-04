@@ -69,24 +69,58 @@ public class KH_BeatMaker : MonoBehaviour
             {
                 currTime += Time.deltaTime;
 
-                //1번 키 누르면 1번키와 현재시간 저장
-                if (Input.GetKeyDown(KeyCode.Alpha1))
+                ////1번 키 누르면 1번키와 현재시간 저장
+                //if (Input.GetKeyDown(KeyCode.Alpha1))
+                //{
+                //    AddNode(1, currTime);
+                //}
+
+                ////2번 키 누르면 2번키와 현재시간 저장
+                //if (Input.GetKeyDown(KeyCode.Alpha2))
+                //{
+                //    AddNode(2, currTime);
+                //}
+                //if (Input.GetKeyDown(KeyCode.Alpha3))
+                //{
+                //    AddNode(3, currTime);
+                //}
+                //if (Input.GetKeyDown(KeyCode.Alpha4))
+                //{
+                //    AddNode(4, currTime);
+                //}
+
+                //녹음 단축키
+                if (Input.GetKeyDown(KeyCode.A))
                 {
                     AddNode(1, currTime);
                 }
-
-                //2번 키 누르면 2번키와 현재시간 저장
-                if (Input.GetKeyDown(KeyCode.Alpha2))
+                if (Input.GetKeyDown(KeyCode.S))
                 {
                     AddNode(2, currTime);
                 }
-                if (Input.GetKeyDown(KeyCode.Alpha3))
+                if (Input.GetKeyDown(KeyCode.D))
                 {
                     AddNode(3, currTime);
                 }
-                if (Input.GetKeyDown(KeyCode.Alpha4))
+                if (Input.GetKeyDown(KeyCode.F))
                 {
                     AddNode(4, currTime);
+                }
+                if (Input.GetKeyDown(KeyCode.Q))
+                {
+                    AddNode(5, currTime);
+                }
+                if (Input.GetKeyDown(KeyCode.W))
+                {
+                    AddNode(6, currTime);
+                }
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    AddNode(7, currTime);
+                }
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    AddNode(8, currTime);
                 }
             }
         }

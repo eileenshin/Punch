@@ -100,7 +100,7 @@ public class KH_GameManager : MonoBehaviour
                 GameObject node = Instantiate(nodeFactory);
                 int idx = listNode[nodeCnt].nodeNum - 1;
                 node.transform.position = nodePos[idx].position;
-
+                //node.transform.SetParent(nodePos[idx]);
                 if (nodeCnt < listNode.Count - 1)
                 {
                     nextTime += (listNode[nodeCnt + 1].time - listNode[nodeCnt].time);
