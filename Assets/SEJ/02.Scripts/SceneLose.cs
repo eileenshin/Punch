@@ -23,18 +23,18 @@ public class SceneLose : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
                          
-    private void OnClickRepaly()
+    public void OnClickRepaly()
     {
         SceneManager.LoadScene("KH_StartScene");
     }
 
-    private void OnClickQuit()
+    public void OnClickExit()
     {
-        SceneManager.LoadScene("GameOver_Lose");
+        Application.Quit();
     }
 
 
