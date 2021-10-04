@@ -75,28 +75,20 @@ public class ScoreManager : MonoBehaviour
     }
 
    
-    public void AddScore(int addValue)
-    {
+    //public void AddScore(int addValue)
+    //{
 
-        //score += addValue;
-        //combo += 1;
-        //currHP += 1;
+    //    //만약에 현재점수가 최고점수보다 커지면
+    //    if (score > bestScore)
+    //    {
+    //        //최고점수를 현재점수로 갱신
+    //        bestScore = score;
 
-        
-        
+    //        //최고점수를 저장한다 playerprefs.setint("이름",값)
+    //        PlayerPrefs.SetInt("best_score", bestScore);
+    //    }
 
-
-        //만약에 현재점수가 최고점수보다 커지면
-        if (score > bestScore)
-        {
-            //최고점수를 현재점수로 갱신
-            bestScore = score;
-
-            //최고점수를 저장한다 playerprefs.setint("이름",값)
-            PlayerPrefs.SetInt("best_score", bestScore);
-        }
-
-    }
+    //}
     public void LoseScene()
     {
         if(currHP <=0)

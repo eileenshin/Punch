@@ -8,8 +8,9 @@ public class KH_ScoreManager : MonoBehaviour
 {
     public int CurrScore = 0;
     public int Combo = 0;
-    public int HP = 100;
+ 
 
+    //Text UI 
     public Text CurrScoreUI;
     public Text bestScoreUI;
     public Text HpUI;
@@ -19,6 +20,13 @@ public class KH_ScoreManager : MonoBehaviour
     float EndTime = 0;
     public int MissCnt;
 
+
+    public float currHP;
+    public float maxHP = 100;
+    public Image HpBar;
+    public Image BackHpBar;
+    
+    float percent;
 
 
     public static KH_ScoreManager instance;
@@ -36,7 +44,7 @@ public class KH_ScoreManager : MonoBehaviour
     }
     void Start()
     {
-        HP = 100;
+        currHP = maxHP;
         Combo = 0;
         CurrScore = 0;
         MissCnt = 0;
@@ -46,16 +54,18 @@ public class KH_ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (HP > 100)
+      
+
+        if (currHP > 100)
         {
-            HP = 100;
+            currHP = 100;
         }
         float currTime = 0;
         if (currTime > 2)
         {
             //print(Score);
             print(Combo);
-            print(HP);
+          
             currTime = 0;
         }
 
@@ -70,7 +80,7 @@ public class KH_ScoreManager : MonoBehaviour
     {
         this.CurrScore += Score;
         Combo += 1;
-        HP += 1;
+        currHP += 1;
     }
     public void UpdateCurrScore()
     {
@@ -78,19 +88,21 @@ public class KH_ScoreManager : MonoBehaviour
     }
     public void UpdateCombo()
     {
-        ComboUI.text = ""+Combo;
+        ComboUI.text = "Combo : "+Combo;
     }
     public void UpdateHp()
     {
-        HpUI.text = "Hp: " + HP;
+        HpBar.fillAmount = currHP / maxHP;
+        HpUI.text = currHP + "/" + maxHP;
+        percent = (float)currHP / (float)maxHP;
     }
 
     public void LoseScene()
     {
         
-        if (HP <= 0)
+        if (currHP <= 0)
         {
-            //SceneManager.LoadScene(""); //loseScene 가져온다.
+            SceneManager.LoadScene("GameOver_Lose"); //loseScene 가져온다.
             print("Lose");
         }
         
@@ -109,7 +121,7 @@ public class KH_ScoreManager : MonoBehaviour
             EndTime += Time.deltaTime;
             if (EndTime > 2)
             {
-                //SceneManager.LoadScene(""); //Victory 가져온다.
+                SceneManager.LoadScene("GameOver_Victory1"); //Victory 가져온다.
                 print("Victory");
             }
         }

@@ -22,7 +22,7 @@ public class KH_DestroyEndBar : MonoBehaviour
         if (other.gameObject.tag == "Node")
         {
             print("Miss");
-            KH_ScoreManager.instance.HP -= 10;
+            KH_ScoreManager.instance.currHP -= 10;
             KH_ScoreManager.instance.Combo = 0;
             KH_ScoreManager.instance.MissCnt += 1;
             Destroy(other.gameObject);
