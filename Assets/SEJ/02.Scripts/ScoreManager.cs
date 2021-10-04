@@ -115,7 +115,7 @@ public class ScoreManager : MonoBehaviour
         {
             
             EndTime += Time.deltaTime;
-            if (EndTime > 2)
+            if (EndTime > 5)
             {
                 SceneManager.LoadScene("GameOver_Victory1"); //Victory 가져온다.
               
