@@ -14,7 +14,7 @@ public class KH_Node : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.position += Vector3.back * speed * Time.fixedDeltaTime;
+        transform.position += -transform.forward * speed * Time.fixedDeltaTime;
         //transform.back? 이렇게하면 되려나?
 
     }
