@@ -111,11 +111,11 @@ public class ScoreManager : MonoBehaviour
         int nodeCnt = GameManager.instance.nodeCnt;
         print("count: " + count);
         print("Nodecount: " + nodeCnt);
-        if (3 == nodeCnt)
+        if (count == nodeCnt)
         {
             
             EndTime += Time.deltaTime;
-            //if (EndTime > 2)
+            if (EndTime > 2)
             {
                 SceneManager.LoadScene("GameOver_Victory1"); //Victory 가져온다.
               
