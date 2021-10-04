@@ -48,7 +48,7 @@ public class End : MonoBehaviour
             else
             {
                 print("Miss");
-
+                ScoreManager.instance.missCount += 1;
                 ScoreManager.instance.combo = 0;
                 ScoreManager.instance.currHP -= 10;
 

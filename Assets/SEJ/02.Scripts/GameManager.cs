@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 
     public float nextTime = 5; //다음생성될 시간
 
-    int nodeCnt = 0; //노드의 개수
+    public int nodeCnt = 0; //노드의 개수
 
     public float nodeSpeed; //노드가 떨어지는 속도
 

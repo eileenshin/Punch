@@ -16,6 +16,7 @@ public class ScoreManager : MonoBehaviour
     public int combo;
     public int score;
     public int bestScore;
+    public int missCount;
    
     //체력
     public float currHP;
@@ -43,6 +44,8 @@ public class ScoreManager : MonoBehaviour
     }
     void Start()
     {
+        missCount = 0;
+        score = 0;
         //시작HP
         currHP = maxHP;
         percent = (float)currHP / (float)maxHP;
@@ -52,10 +55,15 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        currHP = maxHP; //
 
         HpBar.fillAmount = currHP / maxHP;
         Hp.text = currHP + "/" + maxHP;
         percent = (float)currHP / (float)maxHP;
+
+        currScore.text = "" + score;
+        comboScore.text = "Combo:" + combo;
+        txtBestScore.text = "Best:" + bestScore;
 
         if (currHP > 100)
         {
@@ -63,19 +71,18 @@ public class ScoreManager : MonoBehaviour
         }
 
         LoseScene();
+        WinScene();
     }
 
    
     public void AddScore(int addValue)
     {
 
-        score += addValue;
-        combo += 1;
-        currHP += 1;
+        //score += addValue;
+        //combo += 1;
+        //currHP += 1;
 
-        currScore.text = ""+ score ;
-        comboScore.text = "Combo:" + combo;
-        txtBestScore.text = "Best:" + bestScore;
+        
         
 
 
@@ -95,6 +102,24 @@ public class ScoreManager : MonoBehaviour
         if(currHP <=0)
         {
           SceneManager.LoadScene("GameOver_Lose");
+        }
+    }
+    float EndTime = 0;
+    public void WinScene()
+    {
+        int count = GameManager.instance.listNode.Count;
+        int nodeCnt = GameManager.instance.nodeCnt;
+        print("count: " + count);
+        print("Nodecount: " + nodeCnt);
+        if (3 == nodeCnt)
+        {
+            
+            EndTime += Time.deltaTime;
+            //if (EndTime > 2)
+            {
+                SceneManager.LoadScene("GameOver_Victory1"); //Victory 가져온다.
+              
+            }
         }
     }
 

@@ -8,7 +8,7 @@ public class MissZone : MonoBehaviour
     {
         if(other.gameObject.tag=="Node")
         {
-            
+            ScoreManager.instance.missCount += 1;
             ScoreManager.instance.combo = 0;
             ScoreManager.instance.currHP -= 10;
             print("Miss" + ScoreManager.instance.Hp);
