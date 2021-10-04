@@ -20,7 +20,7 @@ public class LoseSceneLine : MonoBehaviour
     //Vector3 hitPoint;
     void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch))
+        //if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch))
         {
 
             Ray ray = new Ray(trRight.position, trRight.forward);

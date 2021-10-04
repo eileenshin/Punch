@@ -55,7 +55,7 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currHP = maxHP; //
+        
 
         HpBar.fillAmount = currHP / maxHP;
         Hp.text = currHP + "/" + maxHP;
@@ -72,19 +72,13 @@ public class ScoreManager : MonoBehaviour
 
         LoseScene();
         WinScene();
+        AddScore();
+        
     }
 
    
-    public void AddScore(int addValue)
+    public void AddScore()
     {
-
-        //score += addValue;
-        //combo += 1;
-        //currHP += 1;
-
-        
-        
-
 
         //만약에 현재점수가 최고점수보다 커지면
         if (score > bestScore)

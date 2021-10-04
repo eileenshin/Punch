@@ -715,6 +715,7 @@ MonoBehaviour:
   combo: 0
   score: 0
   bestScore: 0
+  missCount: 0
   currHP: 0
   maxHP: 100
   HpBar: {fileID: 782743134}
@@ -1638,6 +1639,7 @@ MonoBehaviour:
   bgm: {fileID: 761752013}
   currTime: 0
   nextTime: 5
+  nodeCnt: 0
   nodeSpeed: 0
   fractureMat: {fileID: 2100000, guid: fd3857a8a75102a42bde019660f4f08f, type: 2}
   nodePos:
@@ -2169,6 +2171,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 433174408, guid: ea99370d4230f3048a46a28a90a22c1b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 433174408, guid: ea99370d4230f3048a46a28a90a22c1b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 693673062, guid: ea99370d4230f3048a46a28a90a22c1b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 693673062, guid: ea99370d4230f3048a46a28a90a22c1b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271693114, guid: ea99370d4230f3048a46a28a90a22c1b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079432271, guid: ea99370d4230f3048a46a28a90a22c1b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079432271, guid: ea99370d4230f3048a46a28a90a22c1b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.11
+      objectReference: {fileID: 0}
     - target: {fileID: 6903394086141207132, guid: ea99370d4230f3048a46a28a90a22c1b, type: 3}
       propertyPath: m_Name
       value: Rail
