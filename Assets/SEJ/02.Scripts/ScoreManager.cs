@@ -77,20 +77,20 @@ public class ScoreManager : MonoBehaviour
     }
 
 
-    //public void AddScore(int addValue)
-    //{
+    public void AddScore()
+    {
 
-    //    //���࿡ ���������� �ְ��������� Ŀ����
-    //    if (score > bestScore)
-    //    {
-    //        //�ְ������� ���������� ����
-    //        bestScore = score;
+        //���࿡ ���������� �ְ��������� Ŀ����
+        if (score > bestScore)
+        {
+            //�ְ������� ���������� ����
+            bestScore = score;
 
-    //        //�ְ������� �����Ѵ� playerprefs.setint("�̸�",��)
-    //        PlayerPrefs.SetInt("best_score", bestScore);
-    //    }
+            //�ְ������� �����Ѵ� playerprefs.setint("�̸�",��)
+            PlayerPrefs.SetInt("best_score", bestScore);
+        }
 
-    //}
+    }
     public void LoseScene()
     {
         if(currHP <=0)
