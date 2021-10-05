@@ -115,13 +115,13 @@ public class KH_ScoreManager : MonoBehaviour
         int nodeCnt = KH_GameManager.instance.nodeCnt;
         //print("Count갯수" + count);
         //print("NodeCnt갯수" + nodeCnt);
-        if (count == nodeCnt) 
+        if (3 == nodeCnt) 
         {
 
             EndTime += Time.deltaTime;
-            if (EndTime > 2)
+            //if (EndTime > 2)
             {
-                SceneManager.LoadScene("GameOver_Victory1"); //Victory 가져온다.
+                SceneManager.LoadScene("GameOver_Victory3"); //Victory 가져온다.
                 print("Victory");
             }
         }
