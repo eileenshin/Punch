@@ -54,7 +54,7 @@ public class KH_ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
+        currHP = maxHP;
 
         if (currHP > 100)
         {
