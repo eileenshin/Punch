@@ -7,25 +7,25 @@ using UnityEngine.SceneManagement;
 public class ScoreManager : MonoBehaviour
 {
 
-    //Á¡¼ö ÀÚÃ¼¸¦  End1¿¡¼­ ÆÇÁ¤ÇÏ¸é
-    //Á¡¼ö°è»êÀº ScoreManager°¡ ÇØÁØ´Ù
-    //ÄÞº¸Á¡¼ö, ÇöÀçÁ¡¼ö, ÇöÀçÃ¼·Â
+    //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½  End1ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ScoreManagerï¿½ï¿½ ï¿½ï¿½ï¿½Ø´ï¿½
+    //ï¿½Þºï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½Ã¼ï¿½ï¿½
 
-    //½Ì±ÛÅæÆÐÅÏÀ¸·Î ScoreManager ´ã´Â´Ù
+    //ï¿½Ì±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ScoreManager ï¿½ï¿½ï¿½Â´ï¿½
     public static ScoreManager instance = null;
     public int combo;
     public int score;
     public int bestScore;
     public int missCount;
-   
-    //Ã¼·Â
+
+    //Ã¼ï¿½ï¿½
     public float currHP;
     public float maxHP = 100;
     float percent;
-    //HP UI imageÄÄÆ÷³ÍÆ®
+    //HP UI imageï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
     public Image HpBar;
     public Image BackHpBar;
-    //Text UI 
+    //Text UI
     public Text Hp;
     public Text currScore;
     public Text comboScore;
@@ -46,16 +46,16 @@ public class ScoreManager : MonoBehaviour
     {
         missCount = 0;
         score = 0;
-        //½ÃÀÛHP
+        //ï¿½ï¿½ï¿½ï¿½HP
         currHP = maxHP;
         percent = (float)currHP / (float)maxHP;
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
 
         HpBar.fillAmount = currHP / maxHP;
         Hp.text = currHP + "/" + maxHP;
@@ -73,24 +73,24 @@ public class ScoreManager : MonoBehaviour
         LoseScene();
         WinScene();
         AddScore();
-        
-    }
-
-   
-    public void AddScore()
-    {
-
-        //¸¸¾à¿¡ ÇöÀçÁ¡¼ö°¡ ÃÖ°íÁ¡¼öº¸´Ù Ä¿Áö¸é
-        if (score > bestScore)
-        {
-            //ÃÖ°íÁ¡¼ö¸¦ ÇöÀçÁ¡¼ö·Î °»½Å
-            bestScore = score;
-
-            //ÃÖ°íÁ¡¼ö¸¦ ÀúÀåÇÑ´Ù playerprefs.setint("ÀÌ¸§",°ª)
-            PlayerPrefs.SetInt("best_score", bestScore);
-        }
 
     }
+
+
+    //public void AddScore(int addValue)
+    //{
+
+    //    //ï¿½ï¿½ï¿½à¿¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ä¿ï¿½ï¿½ï¿½ï¿½
+    //    if (score > bestScore)
+    //    {
+    //        //ï¿½Ö°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    //        bestScore = score;
+
+    //        //ï¿½Ö°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½ playerprefs.setint("ï¿½Ì¸ï¿½",ï¿½ï¿½)
+    //        PlayerPrefs.SetInt("best_score", bestScore);
+    //    }
+
+    //}
     public void LoseScene()
     {
         if(currHP <=0)
@@ -107,12 +107,12 @@ public class ScoreManager : MonoBehaviour
         print("Nodecount: " + nodeCnt);
         if (count == nodeCnt)
         {
-            
+
             EndTime += Time.deltaTime;
             if (EndTime > 5)
             {
-                SceneManager.LoadScene("GameOver_Victory1"); //Victory °¡Á®¿Â´Ù.
-              
+                SceneManager.LoadScene("GameOver_Victory1"); //Victory ï¿½ï¿½ï¿½ï¿½ï¿½Â´ï¿½.
+
             }
         }
     }

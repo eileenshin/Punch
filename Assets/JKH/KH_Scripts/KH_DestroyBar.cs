@@ -5,12 +5,21 @@ using UnityEngine;
 public class KH_DestroyBar : MonoBehaviour
 {
     public GameObject Standard;
+    public OVRInput.Controller hand;
     //public float dist1;
     // Start is called before the first frame update
     void Start()
     {
 
     }
+    IEnumerator Vibration()
+    {
+        OVRInput.SetControllerVibration(1f, 1f, hand);
+
+        yield return null;
+        OVRInput.SetControllerVibration(0, 0, hand);
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -41,11 +50,13 @@ public class KH_DestroyBar : MonoBehaviour
             else
             {
                 print("Miss");
-                KH_ScoreManager.instance.HP -= 10;
+                KH_ScoreManager.instance.currHP -= 10;
                 KH_ScoreManager.instance.Combo = 0;
                 KH_ScoreManager.instance.MissCnt += 1;
             }
             Destroy(other.gameObject);
+
+            StartCoroutine(Vibration());
         }
     }
 }
