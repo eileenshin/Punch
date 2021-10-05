@@ -21,7 +21,7 @@ public class KH_Victory : MonoBehaviour
     public void KH_getGrade()
     {
         int combo = KH_ScoreManager.instance.Combo;
-        int score = KH_ScoreManager.instance.CurrScore;
+        float score = KH_ScoreManager.instance.CurrScore;
         int MissCount = KH_ScoreManager.instance.MissCnt;
         if (MissCount == 0)
         {

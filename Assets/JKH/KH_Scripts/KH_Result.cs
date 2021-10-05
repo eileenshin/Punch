@@ -52,7 +52,7 @@ public class KH_Result : MonoBehaviour
    
     public void getScore()
     {
-        int Score = KH_ScoreManager.instance.CurrScore;
+        float Score = KH_ScoreManager.instance.CurrScore;
         //public Text ResultScore;
         //Eg)ResultScore.text = "ResultScore: " + ResultScore;
     }
