@@ -25,6 +25,7 @@ public class KH_DestroyEndBar : MonoBehaviour
             KH_ScoreManager.instance.currHP -= 10;
             KH_ScoreManager.instance.Combo = 0;
             KH_ScoreManager.instance.MissCnt += 1;
+            //KH_ScoreManager.instance.CurrScore = 0;
             Destroy(other.gameObject);
         }
     }
