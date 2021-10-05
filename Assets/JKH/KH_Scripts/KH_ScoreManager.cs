@@ -121,7 +121,7 @@ public class KH_ScoreManager : MonoBehaviour
             EndTime += Time.deltaTime;
             //if (EndTime > 2)
             {
-                SceneManager.LoadScene("GameOver_Victory3"); //Victory 가져온다.
+                SceneManager.LoadScene("KH_VictoryScene"); //Victory 가져온다.
                 print("Victory");
             }
         }

@@ -20,9 +20,9 @@ public class KH_Victory : MonoBehaviour
     }
     public void KH_getGrade()
     {
-        int combo = ScoreManager.instance.combo;
-        int score = ScoreManager.instance.score;
-        int MissCount = ScoreManager.instance.missCount;
+        int combo = KH_ScoreManager.instance.Combo;
+        int score = KH_ScoreManager.instance.CurrScore;
+        int MissCount = KH_ScoreManager.instance.MissCnt;
         if (MissCount == 0)
         {
             print("Grade_S");
