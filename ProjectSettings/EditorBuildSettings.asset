@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SEJ/01.Scenes/GameOver_Victory1.unity
     guid: d964d1111db28a240ab9df2c42d72511
+  - enabled: 1
+    path: Assets/JKH/KH_Scenes/KH_VictoryScene.unity
+    guid: 5e20501327313894fb7e181029adce6f
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 19deaecb032ef9b4e85e199424c0c4c1, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 72102e866b511234f88db92a03284f0e, type: 2}

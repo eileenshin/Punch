@@ -50,6 +50,7 @@ public class KH_DestroyBar : MonoBehaviour
             else
             {
                 print("Miss");
+                //KH_ScoreManager.instance.CurrScore = 0;
                 KH_ScoreManager.instance.currHP -= 10;
                 KH_ScoreManager.instance.Combo = 0;
                 KH_ScoreManager.instance.MissCnt += 1;
