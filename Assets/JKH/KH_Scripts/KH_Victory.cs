@@ -7,10 +7,12 @@ public class KH_Victory : MonoBehaviour
 
     public Text ranktxt;
     public Text scoretxt;
+    public Text BestScoreUI;
     // Start is called before the first frame update
     void Start()
     {
         KH_getGrade();
+        BestScoreUI.text = "Best: " + KH_ScoreManager.instance.bestScore;
     }
 
     // Update is called once per frame

@@ -10,9 +10,9 @@ public class KH_ScoreManager : MonoBehaviour
     public int Combo = 0;
 
     //가중치 20 50 100/ 2배 3배 5배
-    public float weight_20 = 1.2f;
-    public float weight_50 = 1.5f;
-    public float weight_100 = 2.0f;
+    public float weight_20 = 2f;
+    public float weight_50 = 3f;
+    public float weight_100 = 5f;
 
 
     //Text UI 
@@ -21,7 +21,7 @@ public class KH_ScoreManager : MonoBehaviour
     public Text HpUI;
     public Text ComboUI;
     //public int currScore;
-    public int bestScore;
+    public float bestScore;
     float EndTime = 0;
     public int MissCnt;
 
@@ -41,14 +41,20 @@ public class KH_ScoreManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            //DontDestroyOnLoad(gameObject);
         }
         else
-        {
+        { 
             Destroy(gameObject);
         }
     }
     void Start()
     {
+        //bestScore 보이게하기
+        bestScore = PlayerPrefs.GetFloat("Best");
+        bestScoreUI.text = "Best: " + bestScore;
+
+
         currHP = maxHP;
         Combo = 0;
         CurrScore = 0;
@@ -59,7 +65,7 @@ public class KH_ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currHP = maxHP;
+        //currHP = maxHP;
 
         if (currHP > 100)
         {
@@ -105,6 +111,19 @@ public class KH_ScoreManager : MonoBehaviour
         {
             this.CurrScore += Score * weight_100;
         }
+
+        //만약 최고점수를 넘는다면
+        if(CurrScore> bestScore)
+        {
+            bestScore = CurrScore;
+            bestScoreUI.text = "Best: " + bestScore;
+            PlayerPrefs.SetFloat("Best", bestScore);
+            
+        }
+    }
+    public void UpdateBestScore()
+    {
+        
     }
     public void UpdateCurrScore()
     {
