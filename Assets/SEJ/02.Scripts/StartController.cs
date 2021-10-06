@@ -30,6 +30,7 @@ public class StartController : MonoBehaviour
         {
             Ray ray = new Ray(trRight.position, trRight.forward);
             RaycastHit hit;
+            int layer = 1 << LayerMask.NameToLayer("UI");
             if(Physics.Raycast(ray, out hit))
             {
                 line.gameObject.SetActive(true);
