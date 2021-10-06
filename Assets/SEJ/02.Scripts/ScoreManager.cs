@@ -10,12 +10,18 @@ public class ScoreManager : MonoBehaviour
 
     public static ScoreManager instance = null;
     public int combo;
-    public int score;
-    public int bestScore;
+    public float score;
+    public float bestScore;
     public int missCount;
 
-    
-   
+    //가중치 20 50 100/ 2배 3배 5배
+    public float weight_20 = 1.2f;
+    public float weight_50 = 1.5f;
+    public float weight_100 = 2.0f;
+
+
+
+
     public float currHP;
     public float maxHP = 100;
     float percent;
@@ -61,6 +67,8 @@ public class ScoreManager : MonoBehaviour
         comboScore.text = "Combo:" + combo;
         txtBestScore.text = "Best:" + bestScore;
 
+        
+
         if (currHP > 100)
         {
             currHP = 100;
@@ -68,23 +76,48 @@ public class ScoreManager : MonoBehaviour
 
         LoseScene();
         WinScene();
-        AddScore();
+       
 
     }
 
+    public void ScoreWeight(int score)
+    {
+        if (combo < 20)
+        {
+            this.score += score;
+        }
 
-    public void AddScore()
+        else if (combo >= 20 && combo < 50)
+        {
+            this.score += score * weight_20;
+        }
+
+        else if (combo >= 50 && combo < 100)
+        {
+            this.score += score * weight_50;
+        }
+
+        else if (combo >= 100)
+        {
+            this.score += score * weight_100;
+        }
+    }
+
+
+    public void AddScore(int Score)
     {
 
-     
-        if (score > bestScore)
-        {
+        combo += 1;
+        currHP += 1;
+        ScoreWeight(Score);
+        //if (score > bestScore)
+        //{
          
-            bestScore = score;
+        //    bestScore = score;
 
          
-            PlayerPrefs.SetInt("best_score", bestScore);
-        }
+        //    PlayerPrefs.SetFloat("best_score", bestScore);
+        //}
 
     }
     public void LoseScene()
