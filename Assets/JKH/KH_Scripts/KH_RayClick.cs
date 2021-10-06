@@ -43,6 +43,11 @@ public class KH_RayClick : MonoBehaviour
             {
                 btn.onClick.Invoke();
             }
+
+            if (btn == null)
+            {
+                return;
+            }
         }
     }
 
