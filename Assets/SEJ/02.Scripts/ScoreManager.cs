@@ -7,22 +7,19 @@ using UnityEngine.SceneManagement;
 public class ScoreManager : MonoBehaviour
 {
 
-    //���� ��ü��  End1���� �����ϸ�
-    //���������� ScoreManager�� ���ش�
-    //�޺�����, ��������, ����ü��
 
-    //�̱����������� ScoreManager ���´�
     public static ScoreManager instance = null;
     public int combo;
     public int score;
     public int bestScore;
     public int missCount;
 
-    //ü��
+    
+   
     public float currHP;
     public float maxHP = 100;
     float percent;
-    //HP UI image������Ʈ
+    //IMAGE UI
     public Image HpBar;
     public Image BackHpBar;
     //Text UI
@@ -46,13 +43,12 @@ public class ScoreManager : MonoBehaviour
     {
         missCount = 0;
         score = 0;
-        //����HP
+    
         currHP = maxHP;
         percent = (float)currHP / (float)maxHP;
 
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -80,13 +76,13 @@ public class ScoreManager : MonoBehaviour
     public void AddScore()
     {
 
-        //���࿡ ���������� �ְ��������� Ŀ����
+     
         if (score > bestScore)
         {
-            //�ְ������� ���������� ����
+         
             bestScore = score;
 
-            //�ְ������� �����Ѵ� playerprefs.setint("�̸�",��)
+         
             PlayerPrefs.SetInt("best_score", bestScore);
         }
 
@@ -111,8 +107,7 @@ public class ScoreManager : MonoBehaviour
             EndTime += Time.deltaTime;
             if (EndTime > 5)
             {
-                SceneManager.LoadScene("GameOver_Victory1"); //Victory �����´�.
-
+                SceneManager.LoadScene("GameOver_Victory1"); //Victory
             }
         }
     }

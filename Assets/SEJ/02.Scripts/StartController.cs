@@ -5,18 +5,9 @@ using UnityEngine.UI;
 
 public class StartController : MonoBehaviour
 {
-    public OVRInput.Controller hand;
+   
     public LineRenderer line;
     public Transform trRight;
-    public Transform trLeft;
-
-    IEnumerator Vibration()
-    {
-        OVRInput.SetControllerVibration(1f, 1f, hand);
-
-        yield return null;
-        OVRInput.SetControllerVibration(0, 0, hand);
-    }
 
     void Start()
     {
@@ -26,11 +17,11 @@ public class StartController : MonoBehaviour
     
     void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, hand))
+        if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RHand))
         {
             Ray ray = new Ray(trRight.position, trRight.forward);
             RaycastHit hit;
-            int layer = 1 << LayerMask.NameToLayer("UI");
+    
             if(Physics.Raycast(ray, out hit))
             {
                 line.gameObject.SetActive(true);
@@ -48,9 +39,9 @@ public class StartController : MonoBehaviour
             {
                 line.gameObject.SetActive(false);
             }
-            StartCoroutine(Vibration());
+
         }
-        if(OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger, hand))
+        if(OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RHand))
         {
             if(line.gameObject.activeSelf)
             {
