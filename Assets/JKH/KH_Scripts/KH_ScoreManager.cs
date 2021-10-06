@@ -33,6 +33,10 @@ public class KH_ScoreManager : MonoBehaviour
     
     float percent;
 
+    //나중에할거 진행도
+    public Image ProgressBar;
+    public Image BackProgressBar;
+
 
     public static KH_ScoreManager instance;
 
@@ -65,7 +69,12 @@ public class KH_ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //currHP = maxHP;
+
+
+
+
+
+        currHP = maxHP;
 
         if (currHP > 100)
         {
@@ -85,6 +94,7 @@ public class KH_ScoreManager : MonoBehaviour
         UpdateHp();
         LoseScene();
         VictoryScene();
+        progress();
     }
 
     public void AddScore(int Score)
@@ -120,6 +130,17 @@ public class KH_ScoreManager : MonoBehaviour
             PlayerPrefs.SetFloat("Best", bestScore);
             
         }
+    }
+
+    public Text progressUI;
+    public void progress() //@@@@@@@
+    {
+        int count = KH_GameManager.instance.listNode.Count;
+        int nodeCnt = KH_GameManager.instance.nodeCnt;
+        //진행도
+        ProgressBar.fillAmount = Mathf.Round(nodeCnt / count)*100;
+        float percentage = (float)nodeCnt / (float)count;
+        progressUI.text = Mathf.Round(percentage*100) + "%";
     }
     public void UpdateBestScore()
     {
@@ -162,7 +183,7 @@ public class KH_ScoreManager : MonoBehaviour
         {
 
             EndTime += Time.deltaTime;
-            if (EndTime > 2)
+            if (EndTime > 4.5f)
             {
                 SceneManager.LoadScene("KH_VictoryScene"); //Victory 가져온다.
                 print("Victory");
