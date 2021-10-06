@@ -49,6 +49,7 @@ public class End : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        //if(other.gameObject.tag.Contains="Node")
         if ((other.gameObject.tag == "Node"&& other.gameObject.tag == "Right")||(other.gameObject.tag == "Left"&& other.gameObject.tag == "Node"))
         {
             //¿Ã∆Â∆Æ
