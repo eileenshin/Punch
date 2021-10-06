@@ -38,19 +38,29 @@ public class End : MonoBehaviour
 
             if (dist > -0.5f && dist < 1f)
             {
-                print("µæÁ¡,");
 
-                ScoreManager.instance.score += 100;
-                ScoreManager.instance.combo += 1;
-                ScoreManager.instance.currHP += 1;
+                print("Perfect");
+                ScoreManager.instance.AddScore(100);
+
+                //print("µæÁ¡,");
+                //ScoreManager.instance.AddScore();
+                //ScoreManager.instance.score += 100;
+                //ScoreManager.instance.combo += 1;
+                //ScoreManager.instance.currHP += 1;
             }
 
             else
             {
+
                 print("Miss");
-                ScoreManager.instance.missCount += 1;
-                ScoreManager.instance.combo = 0;
+                ScoreManager.instance.score = 0;
                 ScoreManager.instance.currHP -= 10;
+                ScoreManager.instance.combo = 0;
+                ScoreManager.instance.missCount += 1;
+                //print("Miss");
+                //ScoreManager.instance.missCount += 1;
+                //ScoreManager.instance.combo = 0;
+                //ScoreManager.instance.currHP -= 10;
 
             }
 

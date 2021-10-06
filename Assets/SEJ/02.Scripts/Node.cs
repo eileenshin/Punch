@@ -21,7 +21,7 @@ public class Node : MonoBehaviour
     {
       //  if(currTime < 9.36723f)
         {
-            currTime += Time.fixedDeltaTime;
+            //currTime += Time.fixedDeltaTime;
 
             transform.position += Vector3.back * speed * Time.fixedDeltaTime;
            

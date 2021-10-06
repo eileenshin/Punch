@@ -25,7 +25,7 @@ public class Victory : MonoBehaviour
     public void getGrade()
     {
         int combo = ScoreManager.instance.combo;
-        int score = ScoreManager.instance.score;
+        float score = ScoreManager.instance.score;
         int MissCount = ScoreManager.instance.missCount;
         if (MissCount == 0)
         {
