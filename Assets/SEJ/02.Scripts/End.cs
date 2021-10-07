@@ -46,7 +46,6 @@ public class End : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
 
-        //if (other.gameObject.tag.Contains = "Node")
         if (other.gameObject.tag == "Node")
         {
 
@@ -71,7 +70,6 @@ public class End : MonoBehaviour
             //    //ScoreManager.instance.combo += 1;
             //    //ScoreManager.instance.currHP += 1;
             //}
-
             //else
             //{
             //    print("Miss");
@@ -84,9 +82,6 @@ public class End : MonoBehaviour
             //    //ScoreManager.instance.combo = 0;
             //    //ScoreManager.instance.currHP -= 10;
             //}
-
-
-
 
             //Dissolve dissolve = other.gameObject.GetComponent<Dissolve>();
             //dissolve.Show();

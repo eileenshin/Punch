@@ -110,15 +110,7 @@ public class ScoreManager : MonoBehaviour
         combo += 1;
         currHP += 1;
         ScoreWeight(Score);
-        //if (score > bestScore)
-        //{
-         
-        //    bestScore = score;
-
-         
-        //    PlayerPrefs.SetFloat("best_score", bestScore);
-        //}
-
+ 
     }
     public void LoseScene()
     {

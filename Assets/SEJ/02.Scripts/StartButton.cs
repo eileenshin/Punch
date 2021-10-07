@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class StartButton : MonoBehaviour
 {
@@ -17,9 +18,15 @@ public class StartButton : MonoBehaviour
         
     }
 
-    public void OnClickBtn()
+
+    public void onClickStartButton()
     {
-     
+        SceneManager.LoadScene("KH_GameScene");
+    }
+
+    public void onClickNextLevel()
+    {
+        SceneManager.LoadScene("SEJ_Scene");
     }
 
 }

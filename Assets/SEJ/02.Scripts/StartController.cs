@@ -8,7 +8,7 @@ public class StartController : MonoBehaviour
 
     public LineRenderer line;
     public Transform trRight;
-
+    Button btn;
     void Start()
     {
 
@@ -22,10 +22,10 @@ public class StartController : MonoBehaviour
         Ray ray = new Ray(trRight.position, trRight.forward);
 
         RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit))
+           if (Physics.Raycast(ray, out hit))
         {
             line.gameObject.SetActive(true);
+            
             line.SetPosition(0, trRight.position);
             line.SetPosition(1, hit.point);
         }
@@ -35,10 +35,14 @@ public class StartController : MonoBehaviour
         }
 
 
-        if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RHand))
+        if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch))
+        {
+            btn = hit.transform.GetComponent<Button>();
+        }
+        if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch))
         {
             //만약에 부딪힌 놈이 Button이라면 
-            Button btn = hit.transform.GetComponent<Button>();
+         
             //Button에 OnClick에 등록된 함수를 실행
             if (btn != null)
             {

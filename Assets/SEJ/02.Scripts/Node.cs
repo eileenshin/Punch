@@ -15,8 +15,6 @@ public class Node : MonoBehaviour
     //반경
     public float eftRange = 2;
 
-    bool istrRight;
-    bool istrLeft;
 
     void Start()
     {
@@ -24,8 +22,8 @@ public class Node : MonoBehaviour
         standard = GameObject.Find("EndPos");
         //이펙트도 똑같이 gameobject찾아서 transform지정하기
         //eftFactory = GameObject.Find("") 
-
     }
+
    
 
 
