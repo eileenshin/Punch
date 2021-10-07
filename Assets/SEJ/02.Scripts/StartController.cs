@@ -9,6 +9,7 @@ public class StartController : MonoBehaviour
     public LineRenderer line;
     public Transform trRight;
     Button btn;
+
     void Start()
     {
 
@@ -22,7 +23,7 @@ public class StartController : MonoBehaviour
         Ray ray = new Ray(trRight.position, trRight.forward);
 
         RaycastHit hit;
-           if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit))
         {
             line.gameObject.SetActive(true);
             
@@ -52,14 +53,14 @@ public class StartController : MonoBehaviour
             if (line.gameObject.activeSelf)
             {
                 line.gameObject.SetActive(false);
-
             }
         }
-
-
-
-
-
-
     }
 }
+
+
+
+
+
+
+

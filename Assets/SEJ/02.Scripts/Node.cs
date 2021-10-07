@@ -39,15 +39,20 @@ public class Node : MonoBehaviour
     }
       
 
-
+    //노드에 bool값을 넣어서 양손이 닿았을 때 점수의 중복처리를 방지해주자
     bool isTrigger = true;
+    
     private void OnTriggerEnter(Collider other)
     {
-        if (!isTrigger) return;
+        //만약 isTrigger가 false
+        if (!isTrigger) return; 
+        
         //오른손에 닿으면
         if (other.gameObject.tag == "Hand")
         {
             isTrigger = false;
+
+
             //이펙트
             //GameObject eft = Instantiate(eftFactory);
             //eft.transform.position = transform.position;
@@ -91,8 +96,6 @@ public class Node : MonoBehaviour
 
             //EnmeyFracture fracture = other.gameObject.GetComponent<EnmeyFracture>();
             //fracture.OnHit();
-
-            //StartCoroutine(Vibration());
 
         }
     }
