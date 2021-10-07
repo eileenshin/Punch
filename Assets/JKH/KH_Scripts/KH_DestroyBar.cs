@@ -37,6 +37,7 @@ public class KH_DestroyBar : MonoBehaviour
             if (dist1 < .7f)
             {
                 print("Perfect");
+                print("debug"+transform.name);
                 KH_ScoreManager.instance.AddScore(100);
 
             }
