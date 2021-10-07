@@ -28,29 +28,29 @@ public class End : MonoBehaviour
         OVRInput.SetControllerVibration( 0, 0 , hand);
     }
 
-    //추가할 내용 : 노드 한개에 양손이 닿았을 때의 중복점수처리를 없앤다.
-    //한손이라도 노드와 닿았을때 
-    private void OnTriggerStay(Collider other)
-    {
-        istrLeft = false;
-        istrRight = false;
-        if (other.gameObject.tag == "Node" && other.gameObject.tag == "Right")
-        {
-            istrRight = true;
-        }
+    ////추가할 내용 : 노드 한개에 양손이 닿았을 때의 중복점수처리를 없앤다.
+    ////한손이라도 노드와 닿았을때
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    istrLeft = false;
+    //    istrRight = false;
+    //    if (other.gameObject.tag == "Node" && other.gameObject.tag == "Right")
+    //    {
+    //        istrRight = true;
+    //    }
 
-        if (other.gameObject.tag == "Node" && other.gameObject.tag == "Left")
-        {
-            istrLeft = true;
-        }
-    }
+    //    if (other.gameObject.tag == "Node" && other.gameObject.tag == "Left")
+    //    {
+    //        istrLeft = true;
+    //    }
+    //}
 
 
 
     public void OnTriggerEnter(Collider other)
     {
         //if(other.gameObject.tag.Contains="Node")
-        if ((other.gameObject.tag == "Node"&& other.gameObject.tag == "Right")||(other.gameObject.tag == "Left"&& other.gameObject.tag == "Node"))
+        if (other.gameObject.tag == "Node")
         {
             //이펙트
             GameObject eft = Instantiate(eftFactory);

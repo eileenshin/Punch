@@ -29,5 +29,13 @@ public class Node : MonoBehaviour
       
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        //오른손에 닿으면
+        if(other.gameObject.CompareTag("Right"))
+        {
+
+        }
+    }
 
 }
