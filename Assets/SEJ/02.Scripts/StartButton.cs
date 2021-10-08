@@ -17,8 +17,6 @@ public class StartButton : MonoBehaviour
     {
         
     }
-
-
     public void onClickStartButton()
     {
         SceneManager.LoadScene("KH_GameScene");
@@ -27,6 +25,11 @@ public class StartButton : MonoBehaviour
     public void onClickNextLevel()
     {
         SceneManager.LoadScene("SEJ_Scene");
+    }
+    
+    public void OnClickGo()
+    {
+        
     }
 
 }

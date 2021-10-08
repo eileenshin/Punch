@@ -25,17 +25,13 @@ public class SceneLose : MonoBehaviour
     }
     public void GetScore()
     {
-        int combo = ScoreManager.instance.combo;
         float score = ScoreManager.instance.score;
-        int MissCount = ScoreManager.instance.missCount;
-
-
 
         ranktxt.text = "F";
-        scoretxt.text = "Score : " + score + '\n' + "Combo : " + combo;
-
-
+        scoretxt.text = "Score : " + score + '\n' + "Try again?";
     }
+
+
                          
     public void OnClickRepaly()
     {
