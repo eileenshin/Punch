@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+
 [RequireComponent(typeof(ParticleSystem))]
 public class particleAttractorLinear : MonoBehaviour {
 	ParticleSystem ps;
