@@ -53,6 +53,10 @@ public class ScoreManager : MonoBehaviour
         currHP = maxHP;
         percent = (float)currHP / (float)maxHP;
 
+        //bestScore 보이게하기
+        bestScore = PlayerPrefs.GetFloat("Best_1");
+        txtBestScore.text = "Best: " + bestScore;
+
     }
 
     void Update()
@@ -65,7 +69,7 @@ public class ScoreManager : MonoBehaviour
 
         currScore.text = "" + score;
         comboScore.text = "Combo:" + combo;
-        txtBestScore.text = "Best:" + bestScore;
+        
 
         
 
@@ -110,6 +114,13 @@ public class ScoreManager : MonoBehaviour
         combo += 1;
         currHP += 1;
         ScoreWeight(Score);
+
+        if (score>bestScore)
+        {
+            bestScore = score;
+            txtBestScore.text = "Best:" + bestScore;
+            PlayerPrefs.SetFloat("Best_1", bestScore);
+        }
  
     }
     public void LoseScene()
