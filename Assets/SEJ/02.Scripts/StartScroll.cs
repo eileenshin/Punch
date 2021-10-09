@@ -10,13 +10,11 @@ public class StartScroll : MonoBehaviour
     float scroll_pos = 0;
     float[] pos;
 
-    // Start is called before the first frame update
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         pos = new float[transform.childCount];
@@ -25,11 +23,12 @@ public class StartScroll : MonoBehaviour
         {
             pos[i] = dis * i;
         }
-        if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch))
+        //if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch))
+        if (OVRInput.Get(OVRInput.Touch.PrimaryThumbstick))
         {
             scroll_pos = scrollbar.GetComponent<Scrollbar>().value;
-
         }
+
         else
         {
             for (int i = 0; i < pos.Length; i++)

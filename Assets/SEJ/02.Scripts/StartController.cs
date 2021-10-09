@@ -38,11 +38,11 @@ public class StartController : MonoBehaviour
 
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch))
         {
+            //만약에 부딪힌 놈이 Button이라면 
             btn = hit.transform.GetComponent<Button>();
         }
         if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch))
         {
-            //만약에 부딪힌 놈이 Button이라면 
          
             //Button에 OnClick에 등록된 함수를 실행
             if (btn != null)
