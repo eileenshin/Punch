@@ -135,10 +135,10 @@ public class KH_ScoreManager : MonoBehaviour
     public Text progressUI;
     public void progress() //@@@@@@@
     {
-        int count = KH_GameManager.instance.listNode.Count;
-        int nodeCnt = KH_GameManager.instance.nodeCnt;
+        float count = KH_GameManager.instance.listNode.Count;
+        float nodeCnt = KH_GameManager.instance.nodeCnt;
         //ÁøÇàµµ
-        ProgressBar.fillAmount = (float)(nodeCnt / count);
+        ProgressBar.fillAmount = (nodeCnt / count);
         float percentage = (float)nodeCnt / (float)count;
         progressUI.text = Mathf.Round(percentage*100) + "%";
     }
