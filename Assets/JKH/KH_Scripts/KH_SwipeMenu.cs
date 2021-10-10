@@ -2,11 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class KH_SwipeMenu : MonoBehaviour
 {
     public GameObject scrollbar; //scrollBar_horizontal
     private float scroll_pos = 0;
     float[] pos;
+
+    public int ii;
+
+    public bool isShark = false;
+    public bool isNextLevel = false;
+
+    public static KH_SwipeMenu instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            //DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -42,23 +63,55 @@ public class KH_SwipeMenu : MonoBehaviour
             }
         }
 
-
-        for (int i = 0; i < pos.Length; i++)
+        
+        for (ii = 0; ii < pos.Length; ii++)
         {
+
             //기준점에서 일정범위 안에 들어오면 그 버튼을 크게한다
-            if (scroll_pos < pos[i] + (distance / 2) && scroll_pos > pos[i] - (distance / 2))
+            if (scroll_pos < pos[ii] + (distance / 2) && scroll_pos > pos[ii] - (distance / 2))
             {
-                Debug.LogWarning("Current Selected Level" + i);
-                transform.GetChild(i).localScale = Vector2.Lerp(transform.GetChild(i).localScale, new Vector2(1.2f, 1.2f), 0.1f);
+                //i번째 버튼을 크게한다
+                Debug.LogWarning("Current Selected Level" + ii);
+                transform.GetChild(ii).localScale = Vector2.Lerp(transform.GetChild(ii).localScale, new Vector2(1.2f, 1.2f), 0.1f);
+                //i제외, 나머지 버튼 작게한다
                 for (int j = 0; j < pos.Length; j++)
                 {
-                    if (j != i)
+                    if (j != ii)
                     {
                         transform.GetChild(j).localScale = Vector2.Lerp(transform.GetChild(j).localScale, new Vector2(0.8f, 0.8f), 0.1f);
                     }
                 }
+
+                if (ii == 0)
+                {
+                    print("Shark");
+                    //KH_SceneManager.instance.onClickStartBtn();
+                    isShark = true;
+                    isNextLevel = false;
+                }
+
+                if (ii == 1)
+                {
+                    print("NextLevel");
+                    //KH_SceneManager.instance.onClickNextLevel();
+                    isShark = false;
+                    isNextLevel = true;
+                }
+
+                if (ii == 2)
+                {
+                    print("i=2");
+                }
+
+                if (ii == 3)
+                {
+                    print("i=3");
+                }
             }
+            
         }
+
+        
 
     }
 }
