@@ -70,11 +70,7 @@ public class KH_ScoreManager : MonoBehaviour
     void Update()
     {
 
-
-
-
-
-        currHP = maxHP;
+        //currHP = maxHP;  //Max HP
 
         if (currHP > 100)
         {
