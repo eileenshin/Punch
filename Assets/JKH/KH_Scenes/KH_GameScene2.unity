@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: b709a9919bd4047b58bb05887b4faad3, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44824636, g: 0.49827248, b: 0.5755812, a: 1}
+  m_IndirectSpecularColor: {r: 0.014879456, g: 0.04099963, b: 0.030023072, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3870,6 +3870,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rail2
       objectReference: {fileID: 0}
+    - target: {fileID: 3877370025000107939, guid: cd0e286601306644cb69c4c0ef3c6250, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6203118546619256608, guid: cd0e286601306644cb69c4c0ef3c6250, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26.7
@@ -3902,6 +3906,10 @@ PrefabInstance:
     - target: {fileID: 8160565631284334274, guid: ea063867571b0274e890da40a5d22bea, type: 3}
       propertyPath: m_Name
       value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160565631284334274, guid: ea063867571b0274e890da40a5d22bea, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8160565631284334275, guid: ea063867571b0274e890da40a5d22bea, type: 3}
       propertyPath: m_RootOrder
