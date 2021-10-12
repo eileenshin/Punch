@@ -9,11 +9,29 @@ public class StartScroll : MonoBehaviour
 
     float scroll_pos = 0;
     float[] pos;
+    public static StartScroll instance;
 
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            //DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     void Start()
     {
 
     }
+
+    public bool isShark = false;
+    public bool isNextLevel = false;
+
+
 
     void Update()
     {
@@ -23,8 +41,8 @@ public class StartScroll : MonoBehaviour
         {
             pos[i] = dis * i;
         }
-        //if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch))
-        if (OVRInput.Get(OVRInput.Touch.PrimaryThumbstick))
+        if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch))
+        //if (OVRInput.Get(OVRInput.Touch.PrimaryThumbstick))
         {
             scroll_pos = scrollbar.GetComponent<Scrollbar>().value;
         }
@@ -52,6 +70,35 @@ public class StartScroll : MonoBehaviour
                     {
                         transform.GetChild(a).localScale = Vector2.Lerp(transform.GetChild(a).localScale, new Vector2(0.8f, 0.8f), 0.1f);
                     }
+                }
+                if (i == 1)
+                {
+                    print("Shark");
+                    //KH_SceneManager.instance.onClickStartBtn();
+                    isShark = true;
+                    isNextLevel = false;
+                }
+
+                if (i == 0)
+                {
+                    print("NextLevel");
+                    //KH_SceneManager.instance.onClickNextLevel();
+                    isShark = false;
+                    isNextLevel = true;
+                }
+
+                if (i == 2)
+                {
+                    print("i=2");
+                    isShark = false;
+                    isNextLevel = false;
+                }
+
+                if (i == 3)
+                {
+                    print("i=3");
+                    isShark = false;
+                    isNextLevel = false;
                 }
             }
         }

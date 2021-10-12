@@ -61,8 +61,6 @@ public class ScoreManager : MonoBehaviour
 
     void Update()
     {
-
-
         HpBar.fillAmount = currHP / maxHP;
         Hp.text = currHP + "/" + maxHP;
         percent = (float)currHP / (float)maxHP;
@@ -70,9 +68,6 @@ public class ScoreManager : MonoBehaviour
         currScore.text = "" + score;
         comboScore.text = "Combo:" + combo;
         
-
-        
-
         if (currHP > 100)
         {
             currHP = 100;
@@ -80,8 +75,19 @@ public class ScoreManager : MonoBehaviour
 
         LoseScene();
         WinScene();
-       
-
+        progress();
+    }
+    public Text progressUI;
+    public Image ProgressBar;
+    public Image BackProgressBar;
+    public void progress() 
+    {
+        float count = GameManager.instance.listNode.Count;
+        float nodeCnt = GameManager.instance.nodeCnt;
+        //ÁøÇàµµ
+        ProgressBar.fillAmount = (nodeCnt / count);
+        float percentage = (float)nodeCnt / (float)count;
+        progressUI.text = Mathf.Round(percentage * 100) + "%";
     }
 
     public void ScoreWeight(int score)
