@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
-
-
     public static ScoreManager instance = null;
     public int combo;
     public float score;
@@ -18,9 +16,6 @@ public class ScoreManager : MonoBehaviour
     public float weight_20 = 1.2f;
     public float weight_50 = 1.5f;
     public float weight_100 = 2.0f;
-
-
-
 
     public float currHP;
     public float maxHP = 100;
@@ -87,7 +82,7 @@ public class ScoreManager : MonoBehaviour
         //ÁøÇàµµ
         ProgressBar.fillAmount = (nodeCnt / count);
         float percentage = (float)nodeCnt / (float)count;
-        progressUI.text = Mathf.Round(percentage * 100) + "%";
+        progressUI.text ="Finish"+'\n'+ Mathf.Round(percentage * 100) + "%";
     }
 
     public void ScoreWeight(int score)
@@ -159,7 +154,7 @@ public class ScoreManager : MonoBehaviour
             EndTime += Time.deltaTime;
             if (EndTime > 5)
             {
-                SceneManager.LoadScene("GameOver_Victory1"); //Victory
+                SceneManager.LoadScene("GameOver_Victory1"); 
             }
         }
     }
