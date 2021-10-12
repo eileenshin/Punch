@@ -101,11 +101,15 @@ public class KH_SwipeMenu : MonoBehaviour
                 if (ii == 2)
                 {
                     print("i=2");
+                    isShark = false;
+                    isNextLevel = false;
                 }
 
                 if (ii == 3)
                 {
                     print("i=3");
+                    isShark = false;
+                    isNextLevel = false;
                 }
             }
             
