@@ -129,13 +129,23 @@ public class ScoreManager : MonoBehaviour
         }
  
     }
+
+    public bool isNL = false;
+    
+
     public void LoseScene()
     {
         if(currHP <=0)
         {
+            isNL = true;
           SceneManager.LoadScene("GameOver_Lose");
         }
+
+
+
     }
+
+
     float EndTime = 0;
     public void WinScene()
     {

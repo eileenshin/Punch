@@ -21,14 +21,35 @@ public class SceneLose : MonoBehaviour
 
     void Update()
     {
-       
+        if (ScoreManager.instance.isNL == true)
+        {
+            GetScore();
+
+        }
+        KH_Score();
     }
+
+
+    
     public void GetScore()
     {
+       
+        
         float score = ScoreManager.instance.score;
+        float bestScore = ScoreManager.instance.bestScore;
+        
+        ranktxt.text = "F";
+        scoretxt.text = '\n' + "Score : " + score + '\n' + '\n' + "Try again?";
+
+        
+    }
+    public void KH_Score()
+    {
+        float score = KH_ScoreManager.instance.CurrScore;
+        float bestScore = KH_ScoreManager.instance.bestScore;
 
         ranktxt.text = "F";
-        scoretxt.text = "Score : " + score + '\n' + "Try again?";
+        scoretxt.text = '\n' + "Score : " + score + '\n' + '\n' + "Try again?";
     }
 
 
