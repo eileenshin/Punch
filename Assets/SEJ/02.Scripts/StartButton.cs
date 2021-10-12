@@ -17,19 +17,27 @@ public class StartButton : MonoBehaviour
     {
         
     }
-    public void onClickStartButton()
-    {
-        SceneManager.LoadScene("KH_GameScene");
-    }
+    //public void onClickStartButton()
+    //{
+    //    SceneManager.LoadScene("KH_GameScene");
+    //}
 
-    public void onClickNextLevel()
-    {
-        SceneManager.LoadScene("SEJ_Scene");
-    }
+    //public void onClickNextLevel()
+    //{
+    //    SceneManager.LoadScene("SEJ_Scene");
+    //}
     
     public void OnClickGo()
     {
-        
+        if (StartScroll.instance.isShark == true)
+        {
+            SceneManager.LoadScene("KH_GameScene");
+        }
+
+        else if (StartScroll.instance.isNextLevel == true)
+        {
+            SceneManager.LoadScene("SEJ_Scene");
+        }
     }
 
 }
