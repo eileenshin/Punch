@@ -40,6 +40,8 @@ public class KH_ScoreManager : MonoBehaviour
 
     public static KH_ScoreManager instance;
 
+    public bool isBS = false;
+
     private void Awake()
     {
         if (instance == null)
@@ -162,6 +164,7 @@ public class KH_ScoreManager : MonoBehaviour
         
         if (currHP <= 0)
         {
+            isBS = true;
             SceneManager.LoadScene("GameOver_Lose"); //loseScene 가져온다.
             print("Lose");
         }

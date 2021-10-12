@@ -1123,8 +1123,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btReplay: {fileID: 1658380416}
   btQuit: {fileID: 1316813224}
-  ranktxt: {fileID: 0}
-  scoretxt: {fileID: 0}
+  ranktxt: {fileID: 764540219}
+  scoretxt: {fileID: 1750241600}
 --- !u!65 &1316813228
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1287,8 +1287,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btReplay: {fileID: 1658380416}
   btQuit: {fileID: 1316813224}
-  ranktxt: {fileID: 0}
-  scoretxt: {fileID: 0}
+  ranktxt: {fileID: 764540219}
+  scoretxt: {fileID: 1750241600}
 --- !u!65 &1658380420
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -43,7 +43,7 @@ public class StartController : MonoBehaviour
         }
         if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch))
         {
-         
+
             //Button에 OnClick에 등록된 함수를 실행
             if (btn != null)
             {

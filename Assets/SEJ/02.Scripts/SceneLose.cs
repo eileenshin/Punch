@@ -16,17 +16,21 @@ public class SceneLose : MonoBehaviour
 
     void Start()
     {
-        
-    }
-
-    void Update()
-    {
         if (ScoreManager.instance.isNL == true)
         {
             GetScore();
 
         }
-        KH_Score();
+        if (KH_ScoreManager.instance.isBS == true)
+        {
+            KH_Score();
+
+        }
+    }
+
+    void Update()
+    {
+      
     }
 
 
@@ -56,7 +60,11 @@ public class SceneLose : MonoBehaviour
                          
     public void OnClickRepaly()
     {
+
+        
         SceneManager.LoadScene("SEJ_Start");
+
+        
     }
 
     public void OnClickExit()
