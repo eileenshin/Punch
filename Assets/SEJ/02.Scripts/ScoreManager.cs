@@ -56,6 +56,10 @@ public class ScoreManager : MonoBehaviour
 
     void Update()
     {
+        //확인용으로 넣음
+        currHP = maxHP;
+
+
         HpBar.fillAmount = currHP / maxHP;
         Hp.text = currHP + "/" + maxHP;
         percent = (float)currHP / (float)maxHP;
@@ -133,7 +137,7 @@ public class ScoreManager : MonoBehaviour
         if(currHP <=0)
         {
             isNL = true;
-          SceneManager.LoadScene("GameOver_Lose");
+           SceneManager.LoadScene("GameOver_Lose");
         }
 
 
@@ -154,7 +158,7 @@ public class ScoreManager : MonoBehaviour
             EndTime += Time.deltaTime;
             if (EndTime > 5)
             {
-                SceneManager.LoadScene("GameOver_Victory1"); 
+                //SceneManager.LoadScene("GameOver_Victory1"); 
             }
         }
     }

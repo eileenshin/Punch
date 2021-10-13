@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour
 
     public Material fractureMat;
 
+    //저장경로명
+    public string songname;
+
 
 
     public Transform[] nodePos; //노드가 생성될 위치
@@ -37,13 +40,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    /* 저장파일명 : /text.txt - 넥스트레벨
+    /*
+    * /text.txt : 넥스트레벨
+    * /HMtext.txt : 헤이마마
+    * /onepiece.txt : 원피스
     */
+
     void Start()
     {
         if (BeatMaker.instance.beatMakerMode) return;
 
-        LoadNode("/text.txt");
+        LoadNode(songname);
 
         float dist = nodePos[0].position.z - endPos.position.z;
         float gapTime =(listNode[0].time - nextTime);

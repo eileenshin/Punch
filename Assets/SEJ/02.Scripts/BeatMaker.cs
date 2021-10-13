@@ -129,7 +129,7 @@ public class BeatMaker : MonoBehaviour
         data.data = listNode;
         string str = JsonUtility.ToJson(data, true);
 
-        FileStream file = new FileStream(Application.dataPath + "/text.txt", FileMode.Create);
+        FileStream file = new FileStream(Application.dataPath + "/" + filename + ".txt", FileMode.Create);
         byte[] byteData = Encoding.UTF8.GetBytes(str);
         file.Write(byteData, 0, byteData.Length);
         file.Close();
