@@ -37,11 +37,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /* 저장파일명 : /text.txt - 넥스트레벨
+    */
     void Start()
     {
         if (BeatMaker.instance.beatMakerMode) return;
 
-        LoadNode();
+        LoadNode("/text.txt");
 
         float dist = nodePos[0].position.z - endPos.position.z;
         float gapTime =(listNode[0].time - nextTime);
@@ -88,10 +90,10 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void LoadNode()
+    public void LoadNode(string filename)
     {
 
-        FileStream file = new FileStream(Application.dataPath + "/text.txt", FileMode.Open);
+        FileStream file = new FileStream(Application.dataPath + "/" + filename + ".txt", FileMode.Open);
         byte[] byteData = new byte[file.Length];
         file.Read(byteData, 0, byteData.Length);
         file.Close();
