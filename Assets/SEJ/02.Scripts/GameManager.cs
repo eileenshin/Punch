@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     public Material fractureMat;
 
-
+    public string songName;
 
     public Transform[] nodePos; //노드가 생성될 위치
     public Transform endPos; //노드가 끝날 위치
@@ -37,11 +38,26 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /*
+     * /text.txt 넥스트레벨
+     * /HMtext.txt 헤이마마
+     */
+
     void Start()
     {
         if (BeatMaker.instance.beatMakerMode) return;
 
-        LoadNode();
+        //if(스크립트.instance.bool== true)
+        //{
+        //  
+        //}
+        // LoadNode();
+      
+        LoadNode(songName);
+
+        //LoadNode("text");
+        //LoadNode("HMtext");
+
 
         float dist = nodePos[0].position.z - endPos.position.z;
         float gapTime =(listNode[0].time - nextTime);
@@ -50,6 +66,7 @@ public class GameManager : MonoBehaviour
         nodeSpeed = (dist / gapTime);
 
     }
+
 
     private void FixedUpdate()
     {
@@ -87,15 +104,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    
 
-    public void LoadNode()
+    public void LoadNode(string filename)
     {
 
-        FileStream file = new FileStream(Application.dataPath + "/text.txt", FileMode.Open);
+        FileStream file = new FileStream(Application.dataPath + "/" + filename + ".txt", FileMode.Open);
         byte[] byteData = new byte[file.Length];
         file.Read(byteData, 0, byteData.Length);
         file.Close();
-
 
         NodeJsonData data = JsonUtility.FromJson<NodeJsonData>(Encoding.UTF8.GetString(byteData));
 
@@ -104,4 +121,6 @@ public class GameManager : MonoBehaviour
             listNode.Add(data.data[i]);
         }
     }
+
+
 }
