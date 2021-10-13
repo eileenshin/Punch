@@ -24,28 +24,20 @@ public class SceneLose : MonoBehaviour
         if (KH_ScoreManager.instance.isBS == true)
         {
             KH_Score();
-
         }
     }
-
     void Update()
     {
       
     }
 
-
-    
     public void GetScore()
     {
-       
-        
         float score = ScoreManager.instance.score;
         float bestScore = ScoreManager.instance.bestScore;
         
         ranktxt.text = "F";
         scoretxt.text = '\n' + "Score : " + score + '\n' + '\n' + "Try again?";
-
-        
     }
     public void KH_Score()
     {
@@ -55,16 +47,10 @@ public class SceneLose : MonoBehaviour
         ranktxt.text = "F";
         scoretxt.text = '\n' + "Score : " + score + '\n' + '\n' + "Try again?";
     }
-
-
-                         
+                
     public void OnClickRepaly()
     {
-
-        
         SceneManager.LoadScene("SEJ_Start");
-
-        
     }
 
     public void OnClickExit()
