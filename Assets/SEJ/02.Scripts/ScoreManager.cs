@@ -154,7 +154,7 @@ public class ScoreManager : MonoBehaviour
             EndTime += Time.deltaTime;
             if (EndTime > 5)
             {
-                SceneManager.LoadScene("GameOver_Victory1"); 
+                //SceneManager.LoadScene("GameOver_Victory1"); 
             }
         }
     }
