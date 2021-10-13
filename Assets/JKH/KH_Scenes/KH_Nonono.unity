@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1193,7 +1193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beatMakerMode: 0
   bgm: {fileID: 761752013}
-  filename: no
+  filename: Nonono_kh
   listNode: []
 --- !u!114 &761752015
 MonoBehaviour:
@@ -1890,7 +1890,7 @@ MonoBehaviour:
   nodeCnt: 0
   nodeSpeed: 0
   fractureMat: {fileID: 2100000, guid: fd3857a8a75102a42bde019660f4f08f, type: 2}
-  songName: no
+  songName: Nonono_kh
   nodePos:
   - {fileID: 415607541}
   - {fileID: 1833401185}
