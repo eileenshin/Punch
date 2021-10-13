@@ -41,6 +41,7 @@ public class StartController : MonoBehaviour
             //¸¸¾à¿¡ ºÎµúÈù ³ğÀÌ ButtonÀÌ¶ó¸é 
             btn = hit.transform.GetComponent<Button>();
         }
+
         if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch))
         {
 

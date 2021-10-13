@@ -13,9 +13,6 @@ public class End : MonoBehaviour
     //반경
     public float eftRange = 2;
 
-    bool istrRight;
-    bool istrLeft;
-
     IEnumerator Vibration()
     {
         OVRInput.SetControllerVibration(1f, 1f, hand);
@@ -23,25 +20,6 @@ public class End : MonoBehaviour
         yield return null;
         OVRInput.SetControllerVibration(0, 0, hand);
     }
-
-    ////추가할 내용 : 노드 한개에 양손이 닿았을 때의 중복점수처리를 없앤다.
-    ////한손이라도 노드와 닿았을때
-    //private void OnTriggerStay(Collider other)
-    //{
-    //    istrLeft = false;
-    //    istrRight = false;
-    //    if (other.gameObject.tag == "Node" && other.gameObject.tag == "Right")
-    //    {
-    //        istrRight = true;
-    //    }
-
-    //    if (other.gameObject.tag == "Node" && other.gameObject.tag == "Left")
-    //    {
-    //        istrLeft = true;
-    //    }
-    //}
-
-
 
     public void OnTriggerEnter(Collider other)
     {
