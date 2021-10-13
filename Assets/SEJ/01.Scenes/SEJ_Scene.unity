@@ -1093,7 +1093,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6a6b89540c61651439cf469cdefc99c1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6d37710e0aeb9da4eb01ccfbe42cb1c3, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1193,7 +1193,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beatMakerMode: 0
   bgm: {fileID: 761752013}
-  filename: no
   listNode: []
 --- !u!114 &761752015
 MonoBehaviour:
@@ -1886,11 +1885,10 @@ MonoBehaviour:
   nodeFactory: {fileID: 7238057155037709044, guid: 91c84f1fdc2875b48949ba76c3be51e1, type: 3}
   bgm: {fileID: 761752013}
   currTime: 0
-  nextTime: 0
+  nextTime: 5
   nodeCnt: 0
   nodeSpeed: 0
   fractureMat: {fileID: 2100000, guid: fd3857a8a75102a42bde019660f4f08f, type: 2}
-  songName: no
   nodePos:
   - {fileID: 415607541}
   - {fileID: 1833401185}
@@ -2448,10 +2446,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -6.11
       objectReference: {fileID: 0}
-    - target: {fileID: 2794916520722844487, guid: ea99370d4230f3048a46a28a90a22c1b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2794916520722844490, guid: ea99370d4230f3048a46a28a90a22c1b, type: 3}
       propertyPath: m_LocalScale.z
       value: 31.973703
@@ -2459,10 +2453,6 @@ PrefabInstance:
     - target: {fileID: 6903394086141207132, guid: ea99370d4230f3048a46a28a90a22c1b, type: 3}
       propertyPath: m_Name
       value: Rail
-      objectReference: {fileID: 0}
-    - target: {fileID: 6903394086141207132, guid: ea99370d4230f3048a46a28a90a22c1b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6903394086141207133, guid: ea99370d4230f3048a46a28a90a22c1b, type: 3}
       propertyPath: m_RootOrder

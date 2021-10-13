@@ -34,8 +34,9 @@ public class BeatMaker : MonoBehaviour
     public AudioSource bgm;
     //현재시간
     float currTime;
-
+    //파일경로명 지정
     public string filename;
+
 
     public List<NodeInfo> listNode = new List<NodeInfo>();
 
@@ -49,6 +50,7 @@ public class BeatMaker : MonoBehaviour
 
     void Start()
     {
+        
     }
 
     void Update()
@@ -127,7 +129,7 @@ public class BeatMaker : MonoBehaviour
         data.data = listNode;
         string str = JsonUtility.ToJson(data, true);
 
-        FileStream file = new FileStream(Application.dataPath + "/" + filename + ".txt", FileMode.Create);
+        FileStream file = new FileStream(Application.dataPath + "/text.txt", FileMode.Create);
         byte[] byteData = Encoding.UTF8.GetBytes(str);
         file.Write(byteData, 0, byteData.Length);
         file.Close();

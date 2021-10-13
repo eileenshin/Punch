@@ -43,7 +43,6 @@ public class KH_GameManager : MonoBehaviour
 
         LoadNode();
 
-
         //pos와 endpos간의 거리 (절댓값)
         float dist = Mathf.Abs(nodePos[0].position.z - endPos.position.z);
         //첫번쨰 리스트노드의 시간과 그다음시간 차이?? @@이거 잘 모르겠음
@@ -119,22 +118,7 @@ public class KH_GameManager : MonoBehaviour
     //노드 불러내는 코드
     public void LoadNode()
     {
-        FileStream file = new FileStream(Application.dataPath + "/Shark.txt", FileMode.Open);        
-        byte[] byteData = new byte[file.Length];
-        file.Read(byteData, 0, byteData.Length);
-        file.Close();
-
-        NodeJsonData data = JsonUtility.FromJson<NodeJsonData>(Encoding.UTF8.GetString(byteData));
-
-        for (int i = 0; i < data.data.Count; i++)
-        {
-            listNode.Add(data.data[i]);
-        }
-    }
-
-    public void LoadNode2()
-    {
-        FileStream file = new FileStream(Application.dataPath + "/111.txt", FileMode.Open);
+        FileStream file = new FileStream(Application.dataPath + "/Shark.txt", FileMode.Open);
         byte[] byteData = new byte[file.Length];
         file.Read(byteData, 0, byteData.Length);
         file.Close();
