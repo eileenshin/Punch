@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
     /*
      * /text.txt 넥스트레벨
      * /HMtext.txt 헤이마마
+     * /onepiece.txt 원피스
      */
 
     void Start()

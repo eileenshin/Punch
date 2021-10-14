@@ -34,7 +34,7 @@ public class BeatMaker : MonoBehaviour
     public AudioSource bgm;
     //현재시간
     float currTime;
-
+    //저장할 파일명
     public string filename;
 
     public List<NodeInfo> listNode = new List<NodeInfo>();

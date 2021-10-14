@@ -39,6 +39,22 @@ public class StartButton : MonoBehaviour
         {
             SceneManager.LoadScene("SEJ_Scene");
         }
+        else if (StartScroll.instance.isHeyMama == true)
+        {
+            SceneManager.LoadScene("SEJ_Heymama");
+        }
+        else if (StartScroll.instance.isOnePiece == true)
+        {
+            SceneManager.LoadScene("SEJ_Onepiece");
+        }
+        else if (StartScroll.instance.isNonono == true)
+        {
+          //  SceneManager.LoadScene("SEJ_Scene");
+        }
+        else if (StartScroll.instance.isCloser == true)
+        {
+            //SceneManager.LoadScene("SEJ_Scene");
+        }
     }
 
 }
