@@ -26,7 +26,7 @@ public class StartController : MonoBehaviour
         if (Physics.Raycast(ray, out hit))
         {
             line.gameObject.SetActive(true);
-            
+
             line.SetPosition(0, trRight.position);
             line.SetPosition(1, hit.point);
         }
@@ -38,12 +38,15 @@ public class StartController : MonoBehaviour
 
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch))
         {
+            print("RTouch getdown");
+
             //만약에 부딪힌 놈이 Button이라면 
             btn = hit.transform.GetComponent<Button>();
         }
 
         if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch))
         {
+            print("RTouch getup");
 
             //Button에 OnClick에 등록된 함수를 실행
             if (btn != null)

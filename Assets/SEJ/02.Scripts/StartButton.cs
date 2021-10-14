@@ -49,11 +49,11 @@ public class StartButton : MonoBehaviour
         }
         else if (StartScroll.instance.isNonono == true)
         {
-          //  SceneManager.LoadScene("SEJ_Scene");
+            SceneManager.LoadScene("KH_Nonono");
         }
         else if (StartScroll.instance.isCloser == true)
         {
-            //SceneManager.LoadScene("SEJ_Scene");
+            SceneManager.LoadScene("KH_Closer");
         }
     }
 
