@@ -29,7 +29,7 @@ public class ScoreManager : MonoBehaviour
     public Text comboScore;
     public Text txtBestScore;
 
-
+    public string EachHighestScore;
 
 
     private void Awake()
@@ -49,7 +49,8 @@ public class ScoreManager : MonoBehaviour
         percent = (float)currHP / (float)maxHP;
 
         //bestScore 보이게하기
-        bestScore = PlayerPrefs.GetFloat("Best_1");
+        //bestScore = PlayerPrefs.GetFloat("Best_1");
+        bestScore = PlayerPrefs.GetFloat("\""+EachHighestScore+ "\"");
         txtBestScore.text = "Best: " + bestScore;
 
     }
@@ -119,7 +120,7 @@ public class ScoreManager : MonoBehaviour
         if (score>bestScore)
         {
             bestScore = score;
-            txtBestScore.text = "Best:" + bestScore;
+            txtBestScore.text = EachHighestScore + bestScore;
             PlayerPrefs.SetFloat("Best_1", bestScore);
         }
  
