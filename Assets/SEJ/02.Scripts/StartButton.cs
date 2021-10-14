@@ -9,8 +9,10 @@ public class StartButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ScoreManager.instance.isNL = false;
-        KH_ScoreManager.instance.isBS = false;
+        if(ScoreManager.instance != null)
+            ScoreManager.instance.isNL = false;
+        if(KH_ScoreManager.instance != null)
+            KH_ScoreManager.instance.isBS = false;
     }
 
     // Update is called once per frame

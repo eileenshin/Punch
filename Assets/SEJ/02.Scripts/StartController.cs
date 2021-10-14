@@ -40,8 +40,11 @@ public class StartController : MonoBehaviour
         {
             print("RTouch getdown");
 
-            //¸¸¾à¿¡ ºÎµúÈù ³ğÀÌ ButtonÀÌ¶ó¸é 
-            btn = hit.transform.GetComponent<Button>();
+            if(hit.transform != null)
+            {
+                //¸¸¾à¿¡ ºÎµúÈù ³ğÀÌ ButtonÀÌ¶ó¸é 
+                btn = hit.transform.GetComponent<Button>();
+            }
         }
 
         if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch))
