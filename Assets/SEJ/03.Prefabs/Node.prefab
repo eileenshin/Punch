@@ -114,6 +114,8 @@ MonoBehaviour:
   speed: 1
   nodeNum: 0
   currTime: 0
+  eftFactory: {fileID: 1311366462316954, guid: 506a06125115f2f49b5ee51567bae10c, type: 3}
+  eftRange: 1
 --- !u!114 &5414209280119865549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,7 +123,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7238057155037709044}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5c6c722168bf034095d5d2feecf1a3a, type: 3}
   m_Name: 

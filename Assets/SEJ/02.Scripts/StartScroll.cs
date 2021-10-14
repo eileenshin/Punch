@@ -30,6 +30,12 @@ public class StartScroll : MonoBehaviour
 
     public bool isShark = false;
     public bool isNextLevel = false;
+    public bool isHeyMama = false;
+    public bool isOnePiece = false;
+    public bool isNonono = false;
+    public bool isCloser = false;
+
+
 
 
 
@@ -77,6 +83,11 @@ public class StartScroll : MonoBehaviour
                     //KH_SceneManager.instance.onClickStartBtn();
                     isShark = true;
                     isNextLevel = false;
+                    isHeyMama = false;
+                    isOnePiece = false;
+                    isNonono = false;
+                    isCloser = false;
+
                 }
 
                 if (i == 0)
@@ -85,20 +96,52 @@ public class StartScroll : MonoBehaviour
                     //KH_SceneManager.instance.onClickNextLevel();
                     isShark = false;
                     isNextLevel = true;
+                    isHeyMama = false;
+                    isOnePiece = false;
+                    isNonono = false;
+                    isCloser = false;
                 }
 
                 if (i == 2)
                 {
-                    print("i=2");
+                    print("HeyMama");
                     isShark = false;
                     isNextLevel = false;
+                    isHeyMama = true;
+                    isOnePiece = false;
+                    isNonono = false;
+                    isCloser = false;
                 }
 
                 if (i == 3)
                 {
-                    print("i=3");
+                    print("OnePiece");
                     isShark = false;
                     isNextLevel = false;
+                    isHeyMama = false;
+                    isOnePiece =true;
+                    isNonono = false;
+                    isCloser = false;
+                }
+                if (i == 4)
+                {
+                    print("Nonono");
+                    isShark = false;
+                    isNextLevel = false;
+                    isHeyMama = false;
+                    isOnePiece = false;
+                    isNonono = true;
+                    isCloser = false;
+                }
+                if (i == 5)
+                {
+                    print("Closer");
+                    isShark = false;
+                    isNextLevel = false;
+                    isHeyMama = false;
+                    isOnePiece = false;
+                    isNonono = false;
+                    isCloser = true;
                 }
             }
         }

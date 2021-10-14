@@ -27,10 +27,10 @@ public class End : MonoBehaviour
         if (other.gameObject.tag == "Node")
         {
 
-            //이펙트
-            GameObject eft = Instantiate(eftFactory);
-            eft.transform.position = transform.position;
-            Destroy(eft, 15);
+            ////이펙트
+            //GameObject eft = Instantiate(eftFactory);
+            //eft.transform.position = transform.position;
+            //Destroy(eft, 1);
 
 
             ////Endpos(기준) - 손 위치

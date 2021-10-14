@@ -11,7 +11,7 @@ public class Node : MonoBehaviour
     GameObject standard; //endPos
 
     //이펙트공장
-    GameObject eftFactory;
+    public GameObject eftFactory;
     //반경
     public float eftRange = 2;
 
@@ -21,7 +21,7 @@ public class Node : MonoBehaviour
         speed = GameManager.instance.nodeSpeed;
         standard = GameObject.Find("EndPos");
         //이펙트도 똑같이 gameobject찾아서 transform지정하기
-        //eftFactory = GameObject.Find("") 
+        //eftFactory = GameObject.Find("Particle attractor 003 lightning");
     }
 
    
@@ -53,10 +53,10 @@ public class Node : MonoBehaviour
             isTrigger = false;
 
 
-            //이펙트
-            //GameObject eft = Instantiate(eftFactory);
-            //eft.transform.position = transform.position;
-            //Destroy(eft, 15);
+            // 이펙트
+            GameObject eft = Instantiate(eftFactory);
+            eft.transform.position = other.gameObject.transform.position;
+            Destroy(eft, 0.7f);
 
 
             //Endpos(기준) - 손 위치
