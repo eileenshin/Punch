@@ -4,6 +4,7 @@ using System.IO;
 using System.Text;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -53,7 +54,7 @@ public class GameManager : MonoBehaviour
         //  
         //}
         // LoadNode();
-      
+
         LoadNode(songName);
 
         //LoadNode("text");
@@ -61,11 +62,12 @@ public class GameManager : MonoBehaviour
 
 
         float dist = nodePos[0].position.z - endPos.position.z;
-        float gapTime =(listNode[0].time - nextTime);
-        print(dist + ", " +gapTime);
+        float gapTime = (listNode[0].time - nextTime);
+        print(dist + ", " + gapTime);
 
         nodeSpeed = (dist / gapTime);
 
+        ScoreManager.instance.Init();
     }
 
 
@@ -92,7 +94,7 @@ public class GameManager : MonoBehaviour
                 int idx = listNode[nodeCnt].nodeNum - 1;
                 node.transform.position = nodePos[idx].position;
 
-                if(nodeCnt < listNode.Count -1)
+                if (nodeCnt < listNode.Count - 1)
                 {
                     nextTime += (listNode[nodeCnt + 1].time - listNode[nodeCnt].time);
                 }
@@ -105,12 +107,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    
+
 
     public void LoadNode(string filename)
     {
-
-        FileStream file = new FileStream(Application.dataPath + "/" + filename + ".txt", FileMode.Open);
+    
+        //FileStream file = new FileStream(Application.dataPath + "/" + filename + ".txt", FileMode.Open);
+        FileStream file = new FileStream("C:/Users/user/Desktop/1015/"+ filename+".txt", FileMode.Open);
         byte[] byteData = new byte[file.Length];
         file.Read(byteData, 0, byteData.Length);
         file.Close();
@@ -122,6 +125,4 @@ public class GameManager : MonoBehaviour
             listNode.Add(data.data[i]);
         }
     }
-
-
 }

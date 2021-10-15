@@ -57,6 +57,11 @@ public class StartButton : MonoBehaviour
         {
             SceneManager.LoadScene("KH_Closer");
         }
+
+
+        GameObject scoreCanvas = GameObject.Find("Canvas");
+        if (scoreCanvas != null)
+            scoreCanvas.SetActive(true);
     }
 
 }

@@ -50,8 +50,11 @@ public class KH_GameManager : MonoBehaviour
         float gapTime = Mathf.Abs(listNode[0].time - nextTime);
 
         //속도= 거리/시간
-        nodeSpeed = (dist / gapTime) ; //gaptime
-                                                      //약간 노가다 
+        nodeSpeed = (dist / gapTime); //gaptime
+                                      //약간 노가다 
+
+
+        KH_ScoreManager.instance.Init();
 
     }
 
@@ -119,7 +122,7 @@ public class KH_GameManager : MonoBehaviour
     //노드 불러내는 코드
     public void LoadNode()
     {
-        FileStream file = new FileStream(Application.dataPath + "/Shark.txt", FileMode.Open);        
+        FileStream file = new FileStream("C:/Users/user/Desktop/1015/Shark.txt", FileMode.Open);
         byte[] byteData = new byte[file.Length];
         file.Read(byteData, 0, byteData.Length);
         file.Close();

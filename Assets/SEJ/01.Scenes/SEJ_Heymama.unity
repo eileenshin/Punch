@@ -470,7 +470,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7546281547959538707, guid: 91c84f1fdc2875b48949ba76c3be51e1, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7546281547959538707, guid: 91c84f1fdc2875b48949ba76c3be51e1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -971,7 +971,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.0082607, y: 9.295561, z: 120.558426}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1240723879}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1002,6 +1003,8 @@ MonoBehaviour:
   currScore: {fileID: 143440344}
   comboScore: {fileID: 320027981}
   txtBestScore: {fileID: 720760934}
+  EachHighestScore: Heymama
+  canvas: {fileID: 0}
   progressUI: {fileID: 197120664}
   ProgressBar: {fileID: 486946997}
   BackProgressBar: {fileID: 1547051601}
@@ -1644,19 +1647,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240723875}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -120.558426}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 782743133}
   - {fileID: 439801991}
   - {fileID: 486946996}
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 719943203}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 432.375, y: 245.99998}
+  m_AnchoredPosition: {x: 438.38327, y: 236.70442}
   m_SizeDelta: {x: 864.75, y: 491.99997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1271693114 stripped
@@ -2192,7 +2195,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6903394084765692186
 PrefabInstance:

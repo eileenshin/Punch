@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/SEJ/01.Scenes/SEJ_Start.unity
     guid: 06b9ac1d27498024cb47e0fe43d24060
   - enabled: 0
-    path: Assets/JKH/KH_Scenes/KH_StartScene.unity
+    path: Assets/JKH/KH_Scenes/GameStart.unity
     guid: fa3fd28de7921d540b174162de0068c4
   - enabled: 1
     path: Assets/JKH/KH_Scenes/KH_GameScene.unity

@@ -30,12 +30,14 @@ public class KH_ScoreManager : MonoBehaviour
     public float maxHP = 100;
     public Image HpBar;
     public Image BackHpBar;
-    
+
     float percent;
 
     //나중에할거 진행도
     public Image ProgressBar;
     public Image BackProgressBar;
+
+    public GameObject canvas;
 
 
     public static KH_ScoreManager instance;
@@ -47,10 +49,10 @@ public class KH_ScoreManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            //DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);
         }
         else
-        { 
+        {
             Destroy(gameObject);
         }
     }
@@ -83,7 +85,7 @@ public class KH_ScoreManager : MonoBehaviour
         {
             //print(Score);
             print(Combo);
-          
+
             currTime = 0;
         }
 
@@ -97,7 +99,7 @@ public class KH_ScoreManager : MonoBehaviour
 
     public void AddScore(int Score)
     {
-        
+
         Combo += 1;
         currHP += 1;
         if (Combo < 20)
@@ -105,28 +107,28 @@ public class KH_ScoreManager : MonoBehaviour
             this.CurrScore += Score;
         }
 
-        else if (Combo >= 20&& Combo<50)
+        else if (Combo >= 20 && Combo < 50)
         {
             this.CurrScore += Score * weight_20;
         }
 
-        else if(Combo >= 50 && Combo < 100)
+        else if (Combo >= 50 && Combo < 100)
         {
             this.CurrScore += Score * weight_50;
         }
 
-        else if(Combo >= 100)
+        else if (Combo >= 100)
         {
             this.CurrScore += Score * weight_100;
         }
 
         //만약 최고점수를 넘는다면
-        if(CurrScore> bestScore)
+        if (CurrScore > bestScore)
         {
             bestScore = CurrScore;
             bestScoreUI.text = "Best: " + bestScore;
             PlayerPrefs.SetFloat("Best", bestScore);
-            
+
         }
     }
 
@@ -138,11 +140,11 @@ public class KH_ScoreManager : MonoBehaviour
         //진행도
         ProgressBar.fillAmount = (nodeCnt / count);
         float percentage = (float)nodeCnt / (float)count;
-        progressUI.text = Mathf.Round(percentage*100) + "%";
+        progressUI.text = "Finish" + '\n' + Mathf.Round(percentage * 100) + "%";
     }
     public void UpdateBestScore()
     {
-        
+
     }
     public void UpdateCurrScore()
     {
@@ -150,7 +152,7 @@ public class KH_ScoreManager : MonoBehaviour
     }
     public void UpdateCombo()
     {
-        ComboUI.text = "Combo : "+Combo;
+        ComboUI.text = "Combo : " + Combo;
     }
     public void UpdateHp()
     {
@@ -161,15 +163,18 @@ public class KH_ScoreManager : MonoBehaviour
 
     public void LoseScene()
     {
-        
+
         if (currHP <= 0)
         {
+            currHP = 0;
             isBS = true;
             SceneManager.LoadScene("GameOver_Lose"); //loseScene 가져온다.
             print("Lose");
+            currHP = maxHP;
+            canvas.SetActive(false);
         }
-        
-        
+
+
     }
 
     public void VictoryScene()
@@ -178,7 +183,7 @@ public class KH_ScoreManager : MonoBehaviour
         int nodeCnt = KH_GameManager.instance.nodeCnt;
         //print("Count갯수" + count);
         //print("NodeCnt갯수" + nodeCnt);
-        if (count == nodeCnt) 
+        if (count == nodeCnt)
         {
 
             EndTime += Time.deltaTime;
@@ -186,11 +191,27 @@ public class KH_ScoreManager : MonoBehaviour
             {
                 SceneManager.LoadScene("KH_VictoryScene"); //Victory 가져온다.
                 print("Victory");
+                canvas.SetActive(false);
             }
         }
     }
     public void Miss()
     {
-        
+
+    }
+
+    public void Init()
+    {
+        Combo = 0;
+        CurrScore = 0;
+        MissCnt = 0;
+
+        currHP = maxHP;
+        percent = (float)currHP / (float)maxHP;
+
+        bestScore = PlayerPrefs.GetFloat("Best");
+        bestScoreUI.text = "Best: " + bestScore;
+
+        canvas.SetActive(true);
     }
 }

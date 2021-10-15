@@ -891,6 +891,7 @@ MonoBehaviour:
   currScore: {fileID: 143440344}
   comboScore: {fileID: 320027981}
   txtBestScore: {fileID: 720760934}
+  EachHighestScore: Closer
   progressUI: {fileID: 197120664}
   ProgressBar: {fileID: 486946997}
   BackProgressBar: {fileID: 1547051601}

@@ -30,7 +30,7 @@ public class ScoreManager : MonoBehaviour
     public Text txtBestScore;
 
     public string EachHighestScore;
-
+    public GameObject canvas;
 
     private void Awake()
     {
@@ -38,32 +38,32 @@ public class ScoreManager : MonoBehaviour
         {
             instance = this;
         }
+        else
+            Destroy(gameObject);
+
+        DontDestroyOnLoad(gameObject);
 
     }
+
     void Start()
     {
-        missCount = 0;
-        score = 0;
-    
-        currHP = maxHP;
-        percent = (float)currHP / (float)maxHP;
+        Init();
+        
 
         //bestScore 보이게하기
         //bestScore = PlayerPrefs.GetFloat("Best_1");
-        bestScore = PlayerPrefs.GetFloat("\""+EachHighestScore+ "\"");
-        txtBestScore.text = "Best: " + bestScore;
-
     }
 
-    void Update()
+    void Updater()
     {
+
         HpBar.fillAmount = currHP / maxHP;
         Hp.text = currHP + "/" + maxHP;
         percent = (float)currHP / (float)maxHP;
 
         currScore.text = "" + score;
         comboScore.text = "Combo:" + combo;
-        
+
         if (currHP > 100)
         {
             currHP = 100;
@@ -73,17 +73,43 @@ public class ScoreManager : MonoBehaviour
         WinScene();
         progress();
     }
+
+    void Update()
+    {
+        if(SceneManager.GetActiveScene().name == "KH_Closer")
+        {
+            Updater();
+        }
+        if (SceneManager.GetActiveScene().name == "KH_Nonono")
+        {
+            Updater();
+        }
+        if (SceneManager.GetActiveScene().name == "SEJ_Scene")
+        {
+            Updater();
+        }
+        if (SceneManager.GetActiveScene().name == "SEJ_Onepiece")
+        {
+            Updater();
+        }
+        if (SceneManager.GetActiveScene().name == "SEJ_Heymama")
+        {
+            Updater();
+        }
+
+
+    }
     public Text progressUI;
     public Image ProgressBar;
     public Image BackProgressBar;
-    public void progress() 
+    public void progress()
     {
         float count = GameManager.instance.listNode.Count;
         float nodeCnt = GameManager.instance.nodeCnt;
         //진행도
         ProgressBar.fillAmount = (nodeCnt / count);
         float percentage = (float)nodeCnt / (float)count;
-        progressUI.text ="Finish"+'\n'+ Mathf.Round(percentage * 100) + "%";
+        progressUI.text = "Finish" + '\n' + Mathf.Round(percentage * 100) + "%";
     }
 
     public void ScoreWeight(int score)
@@ -117,30 +143,30 @@ public class ScoreManager : MonoBehaviour
         currHP += 1;
         ScoreWeight(Score);
 
-        if (score>bestScore)
+        if (score > bestScore)
         {
             bestScore = score;
-            txtBestScore.text = EachHighestScore + bestScore;
-            PlayerPrefs.SetFloat("Best_1", bestScore);
+            txtBestScore.text = "Best : " + bestScore;
+            PlayerPrefs.SetFloat(EachHighestScore, bestScore);
         }
- 
+
     }
 
     public bool isNL = false;
-    
+
 
     public void LoseScene()
     {
-        if(currHP <=0)
+        if (currHP <= 0)
         {
+            currHP = 0;
             isNL = true;
-          SceneManager.LoadScene("GameOver_Lose");
+            SceneManager.LoadScene("GameOver_Lose");
+            currHP = maxHP;
+            canvas.SetActive(false);
+         
         }
-
-
-
     }
-
 
     float EndTime = 0;
     public void WinScene()
@@ -155,9 +181,28 @@ public class ScoreManager : MonoBehaviour
             EndTime += Time.deltaTime;
             if (EndTime > 5)
             {
-                //SceneManager.LoadScene("GameOver_Victory1"); 
+                SceneManager.LoadScene("GameOver_Victory1");
+                canvas.SetActive(false);
+               
             }
         }
+    }
+
+    public void Init()
+    {
+        combo = 0;
+        score = 0;
+        missCount = 0;
+
+        currHP = maxHP;
+        percent = (float)currHP / (float)maxHP;
+
+        EachHighestScore = SceneManager.GetActiveScene().name;
+
+        bestScore = PlayerPrefs.GetFloat(EachHighestScore);
+        txtBestScore.text = "Best: " + bestScore;
+
+        canvas.SetActive(true);
     }
 
 
