@@ -74,17 +74,15 @@ public class GameManager : MonoBehaviour
         if (BeatMaker.instance.beatMakerMode) return; //BeatMaker의 녹음모드일때 종료한다
 
         currTime += Time.fixedDeltaTime;
-        if (currTime > 1.5f) // 진행시간이 1.5초보다 커지면
+    
+        if (currTime > nextTime) // 진행시간이 다음생성시간 보다 커지면
         {
             if (bgm.isPlaying == false) //bgm이 재생되는 중이 아니라면
             {
                 bgm.Play(); //bgm시작
                 currTime = 0; //현재시간 초기화!!!!!!!!!
             }
-        }
 
-        if (currTime > nextTime) // 진행시간이 다음생성시간 보다 커지면
-        {
             if (nodeCnt < listNode.Count) //listNode-1 = nodeNum[0] 이 노드의 개수보다 커지면
             {
 
@@ -102,6 +100,8 @@ public class GameManager : MonoBehaviour
 
                 nodeCnt++;
             }
+
+           
         }
     }
 
